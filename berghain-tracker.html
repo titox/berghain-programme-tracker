@@ -157,5 +157,19 @@ function renderDay(day) {
     inDay.filter(d => d.room === 'Panorama Bar').map(renderRow).join('');
 }
 
-renderDay('friday');
+document.getElementById('toggle-fri').addEventListener('click', () => setDay('friday'));
+document.getElementById('toggle-sat').addEventListener('click', () => setDay('saturday'));
+
+function setDay(day) {
+  document.getElementById('toggle-fri').classList.toggle('active', day === 'friday');
+  document.getElementById('toggle-sat').classList.toggle('active', day === 'saturday');
+  renderDay(day);
+}
+
+document.addEventListener('click', (e) => {
+  const row = e.target.closest('.dj-row');
+  if (row) row.classList.toggle('expanded');
+});
+
+setDay('friday');
 </script>
