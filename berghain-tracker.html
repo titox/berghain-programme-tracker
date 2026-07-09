@@ -1,0 +1,161 @@
+<style>
+  :root {
+    --bg: #16151a;
+    --surface: #1c1b21;
+    --fg: #efece6;
+    --muted: #9b9a9e;
+    --berghain: #8fb4c9;
+    --panorama: #d98f3d;
+    --rule: #38373d;
+    --font: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --space-2: 8px;
+    --space-3: 16px;
+    --space-4: 24px;
+    --space-5: 32px;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font);
+  }
+  .page { max-width: 1100px; margin: 0 auto; padding: var(--space-4); }
+  .toggle { display: flex; gap: var(--space-2); margin-bottom: var(--space-5); }
+  .toggle-btn {
+    flex: 1;
+    background: var(--surface);
+    color: var(--muted);
+    border: 1px solid var(--rule);
+    padding: var(--space-3);
+    font-family: var(--font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+  }
+  .toggle-btn.active { color: var(--fg); border-color: var(--fg); }
+  .floors { display: flex; flex-direction: column; }
+  .staircase {
+    display: none;
+    width: 14px;
+    background: repeating-linear-gradient(
+      to bottom, var(--rule) 0 6px, transparent 6px 14px
+    );
+  }
+  .room { flex: 1; padding-top: var(--space-4); }
+  .room h2 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 0 var(--space-3) 0;
+    padding-bottom: var(--space-2);
+    border-bottom: 3px solid var(--room-accent);
+  }
+  .room--berghain { --room-accent: var(--berghain); }
+  .room--panorama { --room-accent: var(--panorama); }
+  .dj-row { border-bottom: 1px solid var(--rule); padding: var(--space-3) 0; cursor: pointer; }
+  .dj-summary { display: flex; align-items: center; flex-wrap: wrap; gap: var(--space-2); }
+  .dj-name { font-weight: 700; text-transform: uppercase; letter-spacing: 0.02em; }
+  .tag {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--room-accent);
+    color: var(--room-accent);
+    transform: rotate(-2deg);
+  }
+  .dj-detail { display: none; padding-top: var(--space-3); color: var(--muted); font-size: 14px; line-height: 1.5; }
+  .dj-row.expanded .dj-detail { display: block; }
+  .dj-blurb { color: var(--fg); font-style: italic; margin: 0 0 var(--space-2) 0; }
+  .dj-bio { margin: 0 0 var(--space-2) 0; }
+  .dj-stats { margin: 0 0 var(--space-2) 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+  .dj-links a { color: var(--fg); margin-right: var(--space-3); text-decoration: underline; }
+  @media (min-width: 768px) {
+    .floors { flex-direction: row; }
+    .staircase { display: block; }
+    .room { padding-top: 0; padding-left: var(--space-4); padding-right: var(--space-4); }
+  }
+</style>
+
+<div class="page">
+  <header class="toggle">
+    <button id="toggle-fri" class="toggle-btn active">FRI 21.08 — REEF</button>
+    <button id="toggle-sat" class="toggle-btn">SAT 22.08 — KLUBNACHT</button>
+  </header>
+  <div class="floors">
+    <section class="room room--berghain">
+      <h2>Berghain</h2>
+      <div id="berghain-col"></div>
+    </section>
+    <div class="staircase" aria-hidden="true"></div>
+    <section class="room room--panorama">
+      <h2>Panorama Bar</h2>
+      <div id="panorama-col"></div>
+    </section>
+  </div>
+</div>
+
+<script>
+const LINEUP = [
+  {"name": "Alix Perez", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Drum & Bass", "Liquid Funk", "Halftime"], "blurb": "Belgian D&B don known for genre-crossing productions spanning liquid, halftime and beyond.", "bio": "Alix Perez (Alix Depauw) is a Belgian drum & bass DJ/producer who began producing at 17 and released his debut album 1984 on Shogun Audio in 2009, followed by Chroma Chords in 2013. In 2016 he founded 1985 Music, a label and clothing imprint spanning drum & bass, dubstep, halftime and IDM. He has collaborated widely across the scene, including as one half of Shades with Eprom, and remains a respected voice for boundary-pushing D&B production.", "links": {"soundcloud": "https://soundcloud.com/alixperez", "instagram": "https://www.instagram.com/alixperez1985/", "youtube": "https://www.youtube.com/watch?v=QJ0bAw80zFU"}},
+  {"name": "Darwin", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Bass Music", "Techno", "Breaks"], "blurb": "Berghain's REEF founder, weaving UK bass, breaks, techno and D&B into ocean-deep sets.", "bio": "Darwin is a Canada-born, Berlin-based DJ, label head and event organizer who founded REEF in 2014, Berghain's dedicated night for UK bass culture spanning dubstep, jungle, breaks and drum & bass. Darwin also runs the SPE:C record label, launched in 2015, and more recently the label Biofield Records. Mixes for Fact (Fact Mix 870) and a Boiler Room x Dekmantel back-to-back set with re:ni showcase a style spanning dubstep, techno, breaks and UK garage.", "links": {"soundcloud": "https://soundcloud.com/darwinspec", "instagram": "https://www.instagram.com/darwin_reef/", "youtube": "https://www.youtube.com/watch?v=gMWUlpIPqg0"}},
+  {"name": "Dbridge", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Drum & Bass", "Autonomic", "Techstep"], "blurb": "Exit Records founder and Autonomic pioneer known for atmospheric, halfstep-leaning D&B.", "bio": "dBridge (Darren White) is an English drum & bass producer active since the genre's early-1990s inception, first as one half of Sewer Monsters and then Future Forces Inc., before joining the D&B supergroup Bad Company UK in the late '90s. He left Bad Company in 2003 to found Exit Records, an outlet for a more experimental, atmospheric sound. In 2009 he and Instra:mental launched the influential Autonomic podcast and club night, showcased on FabricLive.50 in 2010.", "links": {"soundcloud": "https://soundcloud.com/dbridge_exitrecords", "youtube": "https://www.youtube.com/watch?v=mVPeJfk58JI"}},
+  {"name": "Esposito", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Drum & Bass", "Jungle", "Dubstep"], "blurb": "Berlin-based REEF resident spinning slow-building, tension-heavy Drum & Bass sets.", "bio": "Ricardo Esposito is a Hamburg-born, Berlin-based DJ and mastering engineer who began mixing drum & bass, jungle and trip-hop around 2001 before relocating to Berlin in 2005. A resident DJ at Darwin's REEF party at Berghain, he plays almost exclusively drum & bass, building sets with slow-burning tension inspired by LTJ Bukem & MC Conrad's Progression Sessions series. He also works professionally as a mastering engineer for electronic music.", "links": {"soundcloud": "https://soundcloud.com/esposito-2834", "instagram": "https://www.instagram.com/es.po.si/"}},
+  {"name": "Headhunter", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Dubstep", "Jungle"], "blurb": "Bristol dubstep originator revisiting the murky, jungle-inflected sound that built his name.", "bio": "Headhunter is an alias of Bristol producer Antony 'Tony' Williams, who emerged in the mid-2000s with releases on Tempa including the Initiate EP (2007) and the album Nomad (2008), blending dubstep with jungle, techno and dubtech textures. He later moved into juke- and footwork-inflected sounds under the alias Addison Groove, but continues to perform and release as Headhunter, revisiting the darker, sub-heavy productions that built his reputation.", "links": {"youtube": "https://www.youtube.com/watch?v=WjaT_-vgQ9A"}},
+  {"name": "Arthur", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": [], "blurb": "", "bio": "", "links": {}},
+  {"name": "Carré", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": ["Dubstep", "Bass Music", "Leftfield Techno"], "blurb": "Fast At Work co-founder and rising dubstep voice pushing the genre's foundations into bold new territory.", "bio": "Carré (Carré Orenstein) is a US-born, London-based producer and DJ, and co-founder of Fast At Work, the underground party series and label that grew from Los Angeles into an internationally touring imprint. Her sound blends dubstep with percussive, higher-tempo leftfield techno, with releases including 2024's Soft Fascination and Air Sign on Darwin's SPE:C label, plus 2025 releases on the storied Tempa and on EMA's Woozy imprint. Named one of Mixmag's Top Artists to Watch in 2026, she has played Panorama Bar, FOLD, The White Hotel and Outlook Festival.", "links": {"soundcloud": "https://soundcloud.com/carreo", "instagram": "https://www.instagram.com/carre__carre"}},
+  {"name": "Dubrunner", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": ["Dub", "Jungle", "Soundsystem"], "blurb": "Berlin-based Menace label boss channeling steppers dub, jungle and breakbeat through a modernist soundsystem lens.", "bio": "Dubrunner (Charlie) is a UK-born, Berlin-based producer and DJ who runs the Menace label, an outlet for his take on dubwise soundsystem culture spanning steppers, dub and digi productions as a springboard into breakbeat hardcore, jungle and techno. He has shared bills with Iration Steppas, Goldie, Call Super and Addison Groove, with recent Menace releases including the Fallen Tree (2024) and Blackheart (2025) EPs. He describes his own sound as 'Industrial Reggae.'", "links": {"soundcloud": "https://soundcloud.com/dubrunneruk", "instagram": "https://www.instagram.com/dubrunner___"}},
+  {"name": "Jan Loup", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": ["Dubstep", "Drum & Bass", "Halftime"], "blurb": "Toulouse producer weaving modern dubstep, deep D&B and percussive halftime into immersive sonic collages.", "bio": "Jan Loup is a Toulouse-based producer, DJ and sound technician active since 2018, working from a secluded hut studio to build sets that fuse modern dubstep, deep drum & bass, percussive halftime and tribal textures. An integral figure in Toulouse's alternative nightlife, she co-runs Le Comité Des Fêtes, a sound-system-culture collective, and is part of the ambient collective Aïra. She released her first EPs on Nerve Collect and Jupiter4 in 2024, followed by a collaborative EP with Beatrice M. on Priori's NAFF label and a release on the storied Tempa in 2025.", "links": {"soundcloud": "https://www.soundcloud.com/janloup", "instagram": "https://www.instagram.com/fauxbits999"}},
+  {"name": "Le Motel & Magugu", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": ["Global Bass", "Dub", "Pidgin Rap"], "blurb": "Brussels producer Le Motel and Cardiff-based pidgin-rap vocalist Magugu, longtime collaborators fusing organic percussion, dub weight and vocal bass.", "bio": "Le Motel (Fabien Leclercq) is a Brussels-based producer, DJ and film composer whose work blends field-recorded, organic textures with footwork, dub, hip-hop and techno; he runs the Maloca label and released the acclaimed 2015 album OKA. Magugu is a Nigerian-born, Cardiff-based vocalist and 'pidgin rap' experimentalist fusing dancehall, grime, dub, hip-hop and drum & bass with Nigerian pidgin English, earning support from Gilles Peterson and Skrillex. The pair have collaborated since 2021, releasing the Kindness Weakness (2023) and Bitter Better (2025) EPs on Maloca, and appear at REEF as a dedicated back-to-back pairing.", "links": {"soundcloud": "https://soundcloud.com/malocarecords/sets/magugu-le-motel-bitter-better", "youtube": "https://www.youtube.com/watch?v=eRXIGxOD-jc"}},
+  {"name": "Amanda Mussi", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Acid", "Breaks"], "blurb": "Brazilian-Paraguayan, Berlin-based DJ known for hypnotic, tribal-percussion-driven techno all-nighters and closing sets.", "bio": "Amanda Mussi is a Brazilian/Paraguayan DJ, producer and label/agency head based in Berlin, known for deep, driving techno sets that blend Detroit's mechanical influences with UK soundscapes, tribal percussion and layered vocals. Before relocating to Europe she was a fixture of São Paulo's queer underground scene, running the monthly party Dûsk for five years and holding residencies at Mamba Negra, Dando and Kode. She has become one of the first female Brazilian DJs to play multiple times on Berghain's main floor, recently earning her first closing set there, and runs the South American booking agency Alt alongside the Macro Hits label.", "links": {"soundcloud": "https://soundcloud.com/ohmussi", "instagram": "https://www.instagram.com/ohmussi/"}, "stats": {"performanceCount": 11, "firstPlayed": "2018-08-25", "isResident": false}},
+  {"name": "Andy Martin", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Sci-Fi Techno", "Ambient"], "blurb": "Mexican-Jamaican producer fusing sci-fi techno with Latin American, Caribbean and Native American futurist narratives.", "bio": "Andy Martin is a Mexico City-based Mexican-Jamaican DJ and producer whose work merges sci-fi techno with Latin American and Caribbean sounds, casting rich, mysterious atmospheres over deep sonic structures. His 2022 debut album Antiguos Astronautas, released on his own label Diaspora Echoes, imagines an advanced pre-Columbian civilization and earned support from DVS1, Nastia, Ben UFO and Richie Hawtin, with airplay in clubs including Berghain, Tresor and Fabric. He has also released ambient work as The Language of Sound and performed at MUTEK festivals in Mexico and Japan; his Klubnacht booking marked his Berghain debut.", "links": {"soundcloud": "https://soundcloud.com/andy-martin", "instagram": "https://www.instagram.com/4ndym4rtin/"}, "stats": {"performanceCount": 6, "firstPlayed": "2024-09-21", "isResident": false}},
+  {"name": "Banu", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Experimental Electronics", "Modular Synth"], "blurb": "Berlin-based artist and activist channeling trippy techno and analog-synth soundscapes into a platform for trans solidarity.", "bio": "Banu (Banu Çiçek Tülü) is a Berlin-based DJ, producer, artist and researcher born in southeast Anatolia, whose work straddles trippy techno, experimental electronics and activism. Her 2022 debut album TransSoundScapes, released on Intergalactic Research Institute for Sound, is built from ARP 2600 synth textures, field recordings and voices, conceived as an act of solidarity between her as a migrant woman and the trans community around her. She played her first Berghain Klubnacht set in January 2026, having previously appeared at the club's 20th-anniversary Elektroakustischer Salon in December 2024.", "links": {"soundcloud": "https://soundcloud.com/banusound", "instagram": "https://www.instagram.com/banusoundd/"}, "stats": {"performanceCount": 1, "firstPlayed": "2026-01-24", "isResident": false}},
+  {"name": "DJ Maria.", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Trance", "Acid"], "blurb": "Osaka-born, Tokyo-based techno artist weaving groovy rhythms and trance-inflected storytelling into immersive sets.", "bio": "DJ MARIA. is a Tokyo-based techno DJ and producer, originally from Osaka, who discovered dance music through psytrance at 13 and began DJing in 2014. Her sets fuse acid, trance and techno into immersive, psychedelic-leaning journeys, and she has played clubs including Bassiani, FOLD, Acquario Masada and the former De School alongside her Berghain appearances. She co-founded the Japanese forest festivals Moment and Transcendance, and released the Acid Sunrise EP on Beyond the Galaxy.", "links": {"soundcloud": "https://soundcloud.com/djmaria-jp", "instagram": "https://www.instagram.com/mariasatelles/"}, "stats": {"performanceCount": 11, "firstPlayed": "2023-02-25", "isResident": false}},
+  {"name": "Kaiser", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Minimal Techno", "Ambient"], "blurb": "Italian producer and K S R label founder moving from ambient electronica into minimal techno and groovy breakbeats.", "bio": "Kaiser (Gianluca Caiati) is an Italian DJ and producer, born and raised in southern Italy, who based himself in Berlin from 2019 to 2025 and now splits time between Italy and Portugal while still calling Berlin home. In 2017 he founded the label K S R (Kaiser Sound Records), a platform for emerging techno artists, and in 2021 launched the duo project Force Reaction with fellow producer Kwartz. He made his Berghain debut on 5 August 2023, opening a Klubnacht with a four-hour set moving from ambient electronica through minimal techno into groovy breakbeats.", "links": {"soundcloud": "https://soundcloud.com/kaiserksr_it", "instagram": "https://www.instagram.com/kaiser_ksr/"}, "stats": {"performanceCount": 6, "firstPlayed": "2023-08-05", "isResident": false}},
+  {"name": "Kwartz", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Dark Techno", "Minimal"], "blurb": "Madrid-born, Berlin-based PoleGroup artist crafting dark, visceral techno alongside his Order&Devotion label.", "bio": "Kwartz (Mario Campos) is a Madrid-born, Berlin-based techno DJ and producer who joined Oscar Mulero's PoleGroup in 2013, becoming a regular presence on the label's roster. He founded his own label, Order&Devotion, in 2016, releasing music that moves between dark atmospheres and deep, visceral sound, with further releases appearing on SK_Eleven, Mord Records, Semantica and Warm Up Recordings. In 2021 he launched the duo project Force Reaction with Kaiser, oriented toward a more classic techno sound.", "links": {"soundcloud": "https://soundcloud.com/kwartz", "instagram": "https://www.instagram.com/kwartz_/"}, "stats": {"performanceCount": 13, "firstPlayed": "2023-05-06", "isResident": false}},
+  {"name": "Norman Nodge", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Detroit Techno", "Chicago House"], "blurb": "Berghain resident since 2005, blending classic Detroit techno and Chicago house into legendary warm-up sets.", "bio": "Norman Nodge is a Leipzig-born, Brandenburg-raised DJ and lawyer who caught the techno bug after the fall of the Wall, promoting parties from 1994 onward where he crossed paths with, and became a mentor to, Marcel Fengler and Marcel Dettmann. After stepping back from nightlife in the late '90s to pursue law and family life, he was pitched to Berghain's management by Dettmann and became a resident DJ instantaneously in 2005, since then playing roughly once a month and specializing in the art of warming up a night. His style fuses classic Detroit techno (Jeff Mills, Robert Hood, 430 West) and Chicago house (Relief, Dance Mania) with new material, never shying from unusual sounds away from current trends.", "links": {"soundcloud": "https://soundcloud.com/norman-nodge", "instagram": "https://www.instagram.com/norman_nodge/"}, "stats": {"performanceCount": 200, "firstPlayed": "2005-02-12", "isResident": true}},
+  {"name": "André Galluzzi", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Techno", "House", "Minimal House"], "blurb": "Frankfurt-born Ostgut/Berghain founding-era resident famed for epic, slow-building sets that can run six hours or more.", "bio": "André Galluzzi (b. 1973, Frankfurt) began DJing at 14, co-founded the TAKSI label in 1995 and became a resident at Tresor the following year before joining Ostgut — the club that became Berghain — as one of its founding residents alongside Marcel Dettmann and Cora S. He has played Panorama Bar for two decades, prized for long, tension-building sets that rarely run under six hours, and produces widely across labels including Ostgut Ton, Cocoon, Cadenza and his own ARAS imprint (co-founded with Dana Ruh around 2010/2011). His debut solo album, Alcatraz, arrived in 2015.", "links": {"soundcloud": "https://soundcloud.com/andre-galluzzi", "instagram": "https://www.instagram.com/andregalluzzi_official/"}, "stats": {"performanceCount": 108, "firstPlayed": "2004-12-18", "isResident": false}},
+  {"name": "Deepa", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["House", "Jazzy House", "Eclectic"], "blurb": "Sydney-based Kerfew co-founder and Club 77 resident bringing warm, genre-blurring house to her Berghain debut.", "bio": "Deepa (Deepa Alam) is a Sydney-based DJ, radio host and events producer, resident at Club 77 and host of FBi Radio's Thursday Sunset slot. She is the founder of the party Bypass and a co-founder of Kerfew, an Australia-wide creative collective of South Asian artists, and previously ran the neo-soul/jazzy-house duo project Honey Point. Her sets pull together clubby, naturalistic textures that play with density and intensity outside straight club and techno formulas, earning attention from Four Tet, John Talabot and Jayda G.", "links": {"soundcloud": "https://soundcloud.com/deepa-alam", "instagram": "https://www.instagram.com/omgdeepa/"}, "stats": {"performanceCount": 2, "firstPlayed": "2024-06-01", "isResident": false}},
+  {"name": "Franziska Berns", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Minimal House", "House", "Techno"], "blurb": "Frankfurt-to-Berlin transplant and former Robert Johnson resident spinning bouncy, bassline-driven minimal house.", "bio": "Franziska Berns grew up near Offenbach am Main and found her way into electronic music as a teenager, interning and then working at Frankfurt's Freebase Records shop, which led to early DJ appearances at Sven Väth's Cocoon Club. She studied art and humanities at Goethe University while establishing herself across Frankfurt/Offenbach venues from 2013, becoming a resident at the storied Robert Johnson club, before relocating to Berlin in autumn 2022. Citing Zip and Perlon as touchstones, her sound favors bouncy, emotionally-charged minimal house with strong basslines over current 'energetic' club trends.", "links": {"soundcloud": "https://soundcloud.com/franziskaberns", "instagram": "https://www.instagram.com/franziskaberns/"}, "stats": {"performanceCount": 6, "firstPlayed": "2024-11-09", "isResident": false}},
+  {"name": "HUNEE", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["House", "Disco", "Global Eclectic"], "blurb": "Bochum-born, Amsterdam-based selector celebrated for genre-fluid, deeply soulful marathon sets.", "bio": "Hunee grew up in Bochum to South Korean parents and moved to Berlin straight after school to dig for records and DJ across the city's clubs, initially producing hip-hop before shifting fully into music in his mid-twenties. He relocated to Amsterdam in 2014 and built close ties with Rush Hour co-founder Antal, releasing his acclaimed debut album Hunch Music via Rush Hour and further records on W.T. Records, Future Times, Internasjonal and Ostgut Ton. He also runs his own label and platform, Lifetones, and is known for expansive, unbounded sets spanning house, disco and beyond.", "links": {"soundcloud": "https://soundcloud.com/hunee", "instagram": "https://www.instagram.com/hunchmusic/"}, "stats": {"performanceCount": 15, "firstPlayed": "2009-10-10", "isResident": false}},
+  {"name": "Maruwa", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Trance", "Progressive House", "Techno"], "blurb": "St. Petersburg-born, Frankfurt-based producer channeling '90s/2000s rave nostalgia into forceful trance-tinged house and techno.", "bio": "Maruwa (Maria Believskaia) grew up in St. Petersburg, trained in classical piano and played keys in a rock band before her brother — a home-studio producer on the local underground circuit — introduced her to electronic music. She began as a producer, moving from big-room EDM through a jazzy hip-hop phase before a friend's introduction to lo-fi house led Mall Grab to sign her to his label Steel City Dance Discs, launching the Maruwa project; she has since released on Steel City Dance Discs and X-Kalay. Now based in Frankfurt, her sets fuse nostalgic '90s/2000s textures with modern trance, progressive house and techno.", "links": {"soundcloud": "https://soundcloud.com/maruwa1", "instagram": "https://www.instagram.com/maruwa.dj/"}},
+  {"name": "Mattias El Mansouri", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Deep House", "House", "Techno"], "blurb": "Stockholm-based Moroccan/Chilean producer weaving deep house, techno and ambient textures into introspective, rhythm-led sets.", "bio": "Mattias El Mansouri was born in the small Swedish town of Skene and is of Moroccan/Chilean descent; he moved to Stockholm, where he co-founded and organized the Ritmo Liminal club concept before shifting from record collecting into producing and DJing. He holds a degree in Theoretical Philosophy and is a resident at Stockholm's Under Bron/Trädgården, one of Sweden's key electronic-music incubators. His productions move between deep, driving rhythms and rich ambient textures, with releases including Tja Hej Salam on Aniara Recordings, a contribution to Nous'klaer Audio's Paraels III compilation, and the Sense Data EP on Phonica Records (March 2026).", "links": {"soundcloud": "https://soundcloud.com/mattiaselmansouri", "instagram": "https://www.instagram.com/mattiaselmansouri/"}, "stats": {"performanceCount": 3, "firstPlayed": "2025-02-01", "isResident": false}},
+  {"name": "Nicola Cruz", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Andean Step", "Downtempo", "Global Bass"], "blurb": "Ecuadorian producer and pioneer of 'Andean Step,' fusing indigenous rhythms and folkloric instrumentation with deep electronic bass.", "bio": "Nicola Cruz was born to Ecuadorian parents in Limoges, France, and moved to Quito at age three, where he trained on percussion and grew fascinated with both electronic and folkloric music from around age 12. Nicolas Jaar heard an early tape and brought him on a US tour in 2012, launching his career; his 2013 Noise Within Us EP was followed by the breakthrough single 'Colibria' (2015, featuring Huaira Ukay) and the acclaimed debut album Prender el Alma on ZZK Records. His latest full-length, Kinesia, arrived in October 2024, continuing his signature blend of Andean cumbia rhythms, traditional Colombian vocal textures and minimalist electronic production.", "links": {"soundcloud": "https://soundcloud.com/nicolacruz", "instagram": "https://www.instagram.com/nicolacruzz/"}, "stats": {"performanceCount": 2, "firstPlayed": "2022-11-19", "isResident": false}},
+  {"name": "Zombies In Miami", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["House", "Techno", "Disco"], "blurb": "Mexico-based duo Cani & Jenouise crafting hardware-only, synth-driven sets of tribal house, techno and disco.", "bio": "Zombies In Miami is the project of Mexican duo Cani and Jenouise, partners in music and life for over 17 years, working entirely with hardware — synths, drum machines and effects, no laptop, no sync — to respond live to the room rather than follow a fixed plan. Their rhythmic fusion of house, techno and disco draws on tribal percussion, analogue textures and deep melodic layers, with releases on Running Back, Permanent Vacation, Correspondant, Cómeme and Kompakt, including their cinematic debut album 2712 on Permanent Vacation. They also run Creatures of the Night, their own label and event series championing like-minded Latin American artists.", "links": {"soundcloud": "https://soundcloud.com/zombiesinmiami", "instagram": "https://www.instagram.com/zombiesinmiami/"}, "stats": {"performanceCount": 11, "firstPlayed": "2016-06-04", "isResident": false}}
+];
+
+function renderRow(dj) {
+  const tags = dj.tags.map(t => `<span class="tag">${t}</span>`).join('');
+  const links = Object.entries(dj.links || {})
+    .map(([k, url]) => `<a href="${url}" target="_blank" rel="noopener">${k}</a>`)
+    .join('');
+  const stats = dj.stats
+    ? `<div class="dj-stats">${dj.stats.performanceCount} Klubnacht performances since ${dj.stats.firstPlayed}${dj.stats.isResident ? ' · Resident' : ''}</div>`
+    : '';
+  return `
+    <div class="dj-row">
+      <div class="dj-summary">
+        <span class="dj-name">${dj.name}</span>${tags}
+      </div>
+      <div class="dj-detail">
+        ${dj.blurb ? `<p class="dj-blurb">${dj.blurb}</p>` : ''}
+        ${dj.bio ? `<p class="dj-bio">${dj.bio}</p>` : ''}
+        ${stats}
+        <div class="dj-links">${links}</div>
+      </div>
+    </div>`;
+}
+
+function renderDay(day) {
+  const inDay = LINEUP.filter(d => d.day === day);
+  document.getElementById('berghain-col').innerHTML =
+    inDay.filter(d => d.room === 'Berghain').map(renderRow).join('');
+  document.getElementById('panorama-col').innerHTML =
+    inDay.filter(d => d.room === 'Panorama Bar').map(renderRow).join('');
+}
+
+renderDay('friday');
+</script>
