@@ -54,10 +54,10 @@ def tracked_text(draw, pos, text, font, fill, tracking=0):
         x += w + tracking
 
 margin = 72
-tracked_text(draw, (margin, 96), "BERLIN  ·  21–22.08.2026", eyebrow_font, PANORAMA, tracking=2)
-draw.text((margin, 150), "YOUR BERGHAIN", font=headline_font, fill=FG)
-draw.text((margin, 234), "WEEKEND", font=headline_font, fill=FG)
-draw.text((margin, 358), "REEF (Fri)  +  Klubnacht (Sat)  —  25 DJs, bios, sets & links", font=sub_font, fill=MUTED)
+tracked_text(draw, (margin, 96), "BERLIN  ·  PROGRAMME TRACKER", eyebrow_font, PANORAMA, tracking=2)
+draw.text((margin, 150), "BERGHAIN", font=headline_font, fill=FG)
+draw.text((margin, 234), "TRACKER", font=headline_font, fill=FG)
+draw.text((margin, 358), "Lineups, bios, sets & links — updated automatically each month", font=sub_font, fill=MUTED)
 
 # Small staircase motif, bottom-left, echoing the page's own divider
 step_y = 470
@@ -70,5 +70,5 @@ steps = [
 for x, y, w, color in steps:
     draw.rectangle([x, y, x + w, y + step_h], fill=color)
 
-canvas.save("assets/og-image.jpg", quality=85)
-print("Saved assets/og-image.jpg", canvas.size)
+canvas.save("og-image.jpg", quality=85)
+print("Saved og-image.jpg", canvas.size)
