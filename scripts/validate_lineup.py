@@ -45,6 +45,7 @@ def check(data):
                     errors.append(f"djs.{slug}: stats missing '{k}'")
 
     seen_dates = set()
+    prev_date = None
     for day in days:
         missing = REQUIRED_DAY_KEYS - day.keys()
         if missing:
@@ -54,6 +55,11 @@ def check(data):
             errors.append(f"days: invalid date format '{day['date']}'")
         if day["date"] in seen_dates:
             errors.append(f"days: duplicate date '{day['date']}'")
+        if prev_date is not None and day["date"] < prev_date:
+            errors.append(
+                f"days: not sorted ascending by date (found '{day['date']}' after '{prev_date}')"
+            )
+        prev_date = day["date"]
         seen_dates.add(day["date"])
         for room in day["rooms"]:
             if "room" not in room or "djSlugs" not in room:

@@ -203,6 +203,13 @@
 
 <script>
 
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+function safeHref(url) {
+  return /^https?:\/\//.test(url) ? url : null;
+}
+
 function getInitials(name) {
   const words = name.replace(/[.]/g, '').split(/\s+/).filter(w => w.length > 1 && w !== '&');
   if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase();
@@ -227,10 +234,10 @@ function ordinal(n) {
 
 function renderRow(slug) {
   const dj = DATA.djs[slug];
-  const tags = dj.tags.map(t => `<span class="tag">${t}</span>`).join('');
+  const tags = dj.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('');
   const links = LINK_LABELS
-    .filter(([key]) => dj.links && dj.links[key])
-    .map(([key, label]) => `<a href="${dj.links[key]}" target="_blank" rel="noopener">${label}</a>`)
+    .filter(([key]) => dj.links && dj.links[key] && safeHref(dj.links[key]))
+    .map(([key, label]) => `<a href="${safeHref(dj.links[key])}" target="_blank" rel="noopener">${label}</a>`)
     .join('');
   const statsParts = [];
   if (dj.appearances.length > 1) statsParts.push(`${ordinal(dj.appearances.length)} appearance since we started tracking`);
@@ -242,12 +249,12 @@ function renderRow(slug) {
       <div class="dj-summary">
         ${dj.photo
           ? `<img class="dj-avatar" src="${dj.photo}" alt="" />`
-          : `<div class="dj-avatar">${getInitials(dj.name)}</div>`}
-        <span class="dj-name">${dj.name}</span>${tags}
+          : `<div class="dj-avatar">${esc(getInitials(dj.name))}</div>`}
+        <span class="dj-name">${esc(dj.name)}</span>${tags}
       </div>
       <div class="dj-detail">
-        ${dj.blurb ? `<p class="dj-blurb">${dj.blurb}</p>` : ''}
-        ${dj.bio ? `<p class="dj-bio">${dj.bio}</p>` : ''}
+        ${dj.blurb ? `<p class="dj-blurb">${esc(dj.blurb)}</p>` : ''}
+        ${dj.bio ? `<p class="dj-bio">${esc(dj.bio)}</p>` : ''}
         ${stats}
         <div class="dj-links">${links}</div>
       </div>
@@ -264,12 +271,12 @@ function roomAccentClass(room, index) {
 function renderFloors(day) {
   const floorsEl = document.getElementById('floors');
   if (!day.rooms.length) {
-    floorsEl.innerHTML = `<div class="day-empty">${day.event} — no lineup listed</div>`;
+    floorsEl.innerHTML = `<div class="day-empty">${esc(day.event)} — no lineup listed</div>`;
     return;
   }
   const sections = day.rooms.map((r, i) => `
     <section class="room room--${roomAccentClass(r.room, i)}">
-      <h2>${r.room}</h2>
+      <h2>${esc(r.room)}</h2>
       <div>${r.djSlugs.map(renderRow).join('')}</div>
     </section>`);
   const withDividers = [];
@@ -284,7 +291,7 @@ const MONTH_NAMES = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SE
 
 function formatDayLabel(day) {
   const [, mm, dd] = day.date.split('-');
-  return `${day.weekday} ${dd}.${mm} — ${day.event}`;
+  return `${day.weekday} ${dd}.${mm} — ${esc(day.event)}`;
 }
 
 function renderNav() {
@@ -331,12 +338,17 @@ document.addEventListener('click', (e) => {
 let DATA = null;
 
 async function init() {
-  const res = await fetch('data/lineup.json');
-  DATA = await res.json();
-  renderNav();
-  setDay(pickDefaultDate(DATA.days));
-  const activeBtn = document.querySelector('.toggle-btn.active');
-  if (activeBtn) activeBtn.scrollIntoView({ inline: 'center', block: 'nearest' });
+  try {
+    const res = await fetch('data/lineup.json');
+    if (!res.ok) throw new Error(`fetch failed: ${res.status}`);
+    DATA = await res.json();
+    renderNav();
+    setDay(pickDefaultDate(DATA.days));
+    const activeBtn = document.querySelector('.toggle-btn.active');
+    if (activeBtn) activeBtn.scrollIntoView({ inline: 'center', block: 'nearest' });
+  } catch (err) {
+    document.getElementById('floors').innerHTML = '<div class="day-empty">Couldn\'t load the programme. Try reloading.</div>';
+  }
 }
 
 init();

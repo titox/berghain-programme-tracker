@@ -6,8 +6,13 @@ Run on the 1st of every month at 00:01. Working directory: this repo
 ## 1. Fetch the programme
 
 Fetch `https://www.berghain.berlin/en/program/`. Identify every listing
-for the current calendar month — club nights, closing parties, one-off
-label nights, concerts, closed days, all of it.
+currently shown on the page — club nights, closing parties, one-off
+label nights, concerts, closed days, all of it — regardless of which
+month it falls in. Step 2 already skips any date already archived, so
+scoping this to "the current month" is unnecessary and would create
+permanent gaps if the page hasn't published the full month yet when
+this runs; fetching everything shown makes each run self-healing for
+whatever the page currently displays, old or new.
 
 If the fetch fails (unreachable, unexpected structure) after one retry:
 **stop here**. Do not write or commit anything. Send a failure
@@ -31,6 +36,9 @@ For every new date:
   it's something else, e.g. "Säule").
 - If it's not a DJ/club night (concert, closed day, etc.): `rooms: []`
   and nothing further for that date.
+
+After appending any new day, re-sort `days[]` ascending by `date` so nav
+ordering and default-day selection stay correct.
 
 ## 4. Resolve each DJ name
 
