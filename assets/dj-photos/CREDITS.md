@@ -7,7 +7,7 @@ Openverse (CC-licensed image search across Flickr/Wikimedia/etc.), same
 standard used for the carousel banner: real license, real identity match,
 otherwise skip rather than guess.
 
-- **andre_galluzzi.jpg** — "Andre Galluzzi Magdeburg 2009 043" by Tim (Schönebeck, Germany),
+- **andre-galluzzi.jpg** — "Andre Galluzzi Magdeburg 2009 043" by Tim (Schönebeck, Germany),
   CC BY-SA 2.0, via Wikimedia Commons. Caption: "André Galluzzi DJing at
   Alte Diamantbrauerei, Magdeburg."
   Source: https://commons.wikimedia.org/wiki/File:Andre_Galluzzi_Magdeburg_2009_043_(3626784378).jpg

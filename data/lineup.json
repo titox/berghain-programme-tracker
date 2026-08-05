@@ -1,27 +1,655 @@
-[
-  {"name": "Alix Perez", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Drum & Bass", "Liquid Funk", "Halftime"], "blurb": "Belgian D&B don known for genre-crossing productions spanning liquid, halftime and beyond.", "bio": "Alix Perez (Alix Depauw) is a Belgian drum & bass DJ/producer who began producing at 17 and released his debut album 1984 on Shogun Audio in 2009, followed by Chroma Chords in 2013. In 2016 he founded 1985 Music, a label and clothing imprint spanning drum & bass, dubstep, halftime and IDM. He has collaborated widely across the scene, including as one half of Shades with Eprom, and remains a respected voice for boundary-pushing D&B production.", "links": {"soundcloud": "https://soundcloud.com/alixperez", "instagram": "https://www.instagram.com/alixperez1985/", "youtube": "https://www.youtube.com/watch?v=QJ0bAw80zFU"}},
-  {"name": "Darwin", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Bass Music", "Techno", "Breaks"], "blurb": "Berghain's REEF founder, weaving UK bass, breaks, techno and D&B into ocean-deep sets.", "bio": "Darwin is a Canada-born, Berlin-based DJ, label head and event organizer who founded REEF in 2014, Berghain's dedicated night for UK bass culture spanning dubstep, jungle, breaks and drum & bass. Darwin also runs the SPE:C record label, launched in 2015, and more recently the label Biofield Records. Mixes for Fact (Fact Mix 870) and a Boiler Room x Dekmantel back-to-back set with re:ni showcase a style spanning dubstep, techno, breaks and UK garage.", "links": {"soundcloud": "https://soundcloud.com/darwinspec", "instagram": "https://www.instagram.com/darwin_reef/", "youtube": "https://www.youtube.com/watch?v=gMWUlpIPqg0"}},
-  {"name": "Dbridge", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Drum & Bass", "Autonomic", "Techstep"], "blurb": "Exit Records founder and Autonomic pioneer known for atmospheric, halfstep-leaning D&B.", "bio": "dBridge (Darren White) is an English drum & bass producer active since the genre's early-1990s inception, first as one half of Sewer Monsters and then Future Forces Inc., before joining the D&B supergroup Bad Company UK in the late '90s. He left Bad Company in 2003 to found Exit Records, an outlet for a more experimental, atmospheric sound. In 2009 he and Instra:mental launched the influential Autonomic podcast and club night, showcased on FabricLive.50 in 2010.", "links": {"soundcloud": "https://soundcloud.com/dbridge_exitrecords", "youtube": "https://www.youtube.com/watch?v=mVPeJfk58JI"}},
-  {"name": "Esposito", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Drum & Bass", "Jungle", "Dubstep"], "blurb": "Berlin-based REEF resident spinning slow-building, tension-heavy Drum & Bass sets.", "bio": "Ricardo Esposito is a Hamburg-born, Berlin-based DJ and mastering engineer who began mixing drum & bass, jungle and trip-hop around 2001 before relocating to Berlin in 2005. A resident DJ at Darwin's REEF party at Berghain, he plays almost exclusively drum & bass, building sets with slow-burning tension inspired by LTJ Bukem & MC Conrad's Progression Sessions series. He also works professionally as a mastering engineer for electronic music.", "links": {"soundcloud": "https://soundcloud.com/esposito-2834", "instagram": "https://www.instagram.com/es.po.si/"}},
-  {"name": "Headhunter", "day": "friday", "event": "REEF", "room": "Berghain", "tags": ["Dubstep", "Jungle"], "blurb": "Bristol dubstep originator revisiting the murky, jungle-inflected sound that built his name.", "bio": "Headhunter is an alias of Bristol producer Antony 'Tony' Williams, who emerged in the mid-2000s with releases on Tempa including the Initiate EP (2007) and the album Nomad (2008), blending dubstep with jungle, techno and dubtech textures. He later moved into juke- and footwork-inflected sounds under the alias Addison Groove, but continues to perform and release as Headhunter, revisiting the darker, sub-heavy productions that built his reputation.", "links": {"youtube": "https://www.youtube.com/watch?v=WjaT_-vgQ9A"}, "photo": "data:image/jpeg;base64,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"},
-  {"name": "Arthur", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": [], "blurb": "", "bio": "", "links": {}},
-  {"name": "Carré", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": ["Dubstep", "Bass Music", "Leftfield Techno"], "blurb": "Fast At Work co-founder and rising dubstep voice pushing the genre's foundations into bold new territory.", "bio": "Carré (Carré Orenstein) is a US-born, London-based producer and DJ, and co-founder of Fast At Work, the underground party series and label that grew from Los Angeles into an internationally touring imprint. Her sound blends dubstep with percussive, higher-tempo leftfield techno, with releases including 2024's Soft Fascination and Air Sign on Darwin's SPE:C label, plus 2025 releases on the storied Tempa and on EMA's Woozy imprint. Named one of Mixmag's Top Artists to Watch in 2026, she has played Panorama Bar, FOLD, The White Hotel and Outlook Festival.", "links": {"soundcloud": "https://soundcloud.com/carreo", "instagram": "https://www.instagram.com/carre__carre"}},
-  {"name": "Dubrunner", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": ["Dub", "Jungle", "Soundsystem"], "blurb": "Berlin-based Menace label boss channeling steppers dub, jungle and breakbeat through a modernist soundsystem lens.", "bio": "Dubrunner (Charlie) is a UK-born, Berlin-based producer and DJ who runs the Menace label, an outlet for his take on dubwise soundsystem culture spanning steppers, dub and digi productions as a springboard into breakbeat hardcore, jungle and techno. He has shared bills with Iration Steppas, Goldie, Call Super and Addison Groove, with recent Menace releases including the Fallen Tree (2024) and Blackheart (2025) EPs. He describes his own sound as 'Industrial Reggae.'", "links": {"soundcloud": "https://soundcloud.com/dubrunneruk", "instagram": "https://www.instagram.com/dubrunner___"}},
-  {"name": "Jan Loup", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": ["Dubstep", "Drum & Bass", "Halftime"], "blurb": "Toulouse producer weaving modern dubstep, deep D&B and percussive halftime into immersive sonic collages.", "bio": "Jan Loup is a Toulouse-based producer, DJ and sound technician active since 2018, working from a secluded hut studio to build sets that fuse modern dubstep, deep drum & bass, percussive halftime and tribal textures. An integral figure in Toulouse's alternative nightlife, she co-runs Le Comité Des Fêtes, a sound-system-culture collective, and is part of the ambient collective Aïra. She released her first EPs on Nerve Collect and Jupiter4 in 2024, followed by a collaborative EP with Beatrice M. on Priori's NAFF label and a release on the storied Tempa in 2025.", "links": {"soundcloud": "https://soundcloud.com/janloup", "instagram": "https://www.instagram.com/fauxbits999"}},
-  {"name": "Le Motel & Magugu", "day": "friday", "event": "REEF", "room": "Panorama Bar", "tags": ["Global Bass", "Dub", "Pidgin Rap"], "blurb": "Brussels producer Le Motel and Cardiff-based pidgin-rap vocalist Magugu, longtime collaborators fusing organic percussion, dub weight and vocal bass.", "bio": "Le Motel (Fabien Leclercq) is a Brussels-based producer, DJ and film composer whose work blends field-recorded, organic textures with footwork, dub, hip-hop and techno; he runs the Maloca label and released the acclaimed 2015 album OKA. Magugu is a Nigerian-born, Cardiff-based vocalist and 'pidgin rap' experimentalist fusing dancehall, grime, dub, hip-hop and drum & bass with Nigerian pidgin English, earning support from Gilles Peterson and Skrillex. The pair have collaborated since 2021, releasing the Kindness Weakness (2023) and Bitter Better (2025) EPs on Maloca, and appear at REEF as a dedicated back-to-back pairing.", "links": {"soundcloud": "https://soundcloud.com/malocarecords/sets/magugu-le-motel-bitter-better", "youtube": "https://www.youtube.com/watch?v=eRXIGxOD-jc"}},
-  {"name": "Amanda Mussi", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Acid", "Breaks"], "blurb": "Brazilian-Paraguayan, Berlin-based DJ known for hypnotic, tribal-percussion-driven techno all-nighters and closing sets.", "bio": "Amanda Mussi is a Brazilian/Paraguayan DJ, producer and label/agency head based in Berlin, known for deep, driving techno sets that blend Detroit's mechanical influences with UK soundscapes, tribal percussion and layered vocals. Before relocating to Europe she was a fixture of São Paulo's queer underground scene, running the monthly party Dûsk for five years and holding residencies at Mamba Negra, Dando and Kode. She has become one of the first female Brazilian DJs to play multiple times on Berghain's main floor, recently earning her first closing set there, and runs the South American booking agency Alt alongside the Macro Hits label.", "links": {"soundcloud": "https://soundcloud.com/ohmussi", "instagram": "https://www.instagram.com/ohmussi/"}, "stats": {"performanceCount": 11, "firstPlayed": "2018-08-25", "isResident": false}},
-  {"name": "Andy Martin", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Sci-Fi Techno", "Ambient"], "blurb": "Mexican-Jamaican producer fusing sci-fi techno with Latin American, Caribbean and Native American futurist narratives.", "bio": "Andy Martin is a Mexico City-based Mexican-Jamaican DJ and producer whose work merges sci-fi techno with Latin American and Caribbean sounds, casting rich, mysterious atmospheres over deep sonic structures. His 2022 debut album Antiguos Astronautas, released on his own label Diaspora Echoes, imagines an advanced pre-Columbian civilization and earned support from DVS1, Nastia, Ben UFO and Richie Hawtin, with airplay in clubs including Berghain, Tresor and Fabric. He has also released ambient work as The Language of Sound and performed at MUTEK festivals in Mexico and Japan; his Klubnacht booking marked his Berghain debut.", "links": {"soundcloud": "https://soundcloud.com/andy-martin", "instagram": "https://www.instagram.com/4ndym4rtin/"}, "stats": {"performanceCount": 6, "firstPlayed": "2024-09-21", "isResident": false}},
-  {"name": "Banu", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Experimental Electronics", "Modular Synth"], "blurb": "Berlin-based artist and activist channeling trippy techno and analog-synth soundscapes into a platform for trans solidarity.", "bio": "Banu (Banu Çiçek Tülü) is a Berlin-based DJ, producer, artist and researcher born in southeast Anatolia, whose work straddles trippy techno, experimental electronics and activism. Her 2022 debut album TransSoundScapes, released on Intergalactic Research Institute for Sound, is built from ARP 2600 synth textures, field recordings and voices, conceived as an act of solidarity between her as a migrant woman and the trans community around her. She played her first Berghain Klubnacht set in January 2026, having previously appeared at the club's 20th-anniversary Elektroakustischer Salon in December 2024.", "links": {"soundcloud": "https://soundcloud.com/banusound", "instagram": "https://www.instagram.com/banusoundd/"}, "stats": {"performanceCount": 1, "firstPlayed": "2026-01-24", "isResident": false}},
-  {"name": "DJ Maria.", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Trance", "Acid"], "blurb": "Osaka-born, Tokyo-based techno artist weaving groovy rhythms and trance-inflected storytelling into immersive sets.", "bio": "DJ MARIA. is a Tokyo-based techno DJ and producer, originally from Osaka, who discovered dance music through psytrance at 13 and began DJing in 2014. Her sets fuse acid, trance and techno into immersive, psychedelic-leaning journeys, and she has played clubs including Bassiani, FOLD, Acquario Masada and the former De School alongside her Berghain appearances. She co-founded the Japanese forest festivals Moment and Transcendance, and released the Acid Sunrise EP on Beyond the Galaxy.", "links": {"soundcloud": "https://soundcloud.com/djmaria-jp", "instagram": "https://www.instagram.com/mariasatelles/"}, "stats": {"performanceCount": 11, "firstPlayed": "2023-02-25", "isResident": false}},
-  {"name": "Kaiser", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Minimal Techno", "Ambient"], "blurb": "Italian producer and K S R label founder moving from ambient electronica into minimal techno and groovy breakbeats.", "bio": "Kaiser (Gianluca Caiati) is an Italian DJ and producer, born and raised in southern Italy, who based himself in Berlin from 2019 to 2025 and now splits time between Italy and Portugal while still calling Berlin home. In 2017 he founded the label K S R (Kaiser Sound Records), a platform for emerging techno artists, and in 2021 launched the duo project Force Reaction with fellow producer Kwartz. He made his Berghain debut on 5 August 2023, opening a Klubnacht with a four-hour set moving from ambient electronica through minimal techno into groovy breakbeats.", "links": {"soundcloud": "https://soundcloud.com/kaiserksr_it", "instagram": "https://www.instagram.com/kaiser_ksr/"}, "stats": {"performanceCount": 6, "firstPlayed": "2023-08-05", "isResident": false}},
-  {"name": "Kwartz", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Dark Techno", "Minimal"], "blurb": "Madrid-born, Berlin-based PoleGroup artist crafting dark, visceral techno alongside his Order&Devotion label.", "bio": "Kwartz (Mario Campos) is a Madrid-born, Berlin-based techno DJ and producer who joined Oscar Mulero's PoleGroup in 2013, becoming a regular presence on the label's roster. He founded his own label, Order&Devotion, in 2016, releasing music that moves between dark atmospheres and deep, visceral sound, with further releases appearing on SK_Eleven, Mord Records, Semantica and Warm Up Recordings. In 2021 he launched the duo project Force Reaction with Kaiser, oriented toward a more classic techno sound.", "links": {"soundcloud": "https://soundcloud.com/kwartz", "instagram": "https://www.instagram.com/kwartz_/"}, "stats": {"performanceCount": 13, "firstPlayed": "2023-05-06", "isResident": false}},
-  {"name": "Norman Nodge", "day": "saturday", "event": "Klubnacht", "room": "Berghain", "tags": ["Techno", "Detroit Techno", "Chicago House"], "blurb": "Berghain resident since 2005, blending classic Detroit techno and Chicago house into legendary warm-up sets.", "bio": "Norman Nodge is a Leipzig-born, Brandenburg-raised DJ and lawyer who caught the techno bug after the fall of the Wall, promoting parties from 1994 onward where he crossed paths with, and became a mentor to, Marcel Fengler and Marcel Dettmann. After stepping back from nightlife in the late '90s to pursue law and family life, he was pitched to Berghain's management by Dettmann and became a resident DJ instantaneously in 2005, since then playing roughly once a month and specializing in the art of warming up a night. His style fuses classic Detroit techno (Jeff Mills, Robert Hood, 430 West) and Chicago house (Relief, Dance Mania) with new material, never shying from unusual sounds away from current trends.", "links": {"soundcloud": "https://soundcloud.com/norman-nodge", "instagram": "https://www.instagram.com/norman_nodge/"}, "stats": {"performanceCount": 200, "firstPlayed": "2005-02-12", "isResident": true}},
-  {"name": "André Galluzzi", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Techno", "House", "Minimal House"], "blurb": "Frankfurt-born Ostgut/Berghain founding-era resident famed for epic, slow-building sets that can run six hours or more.", "bio": "André Galluzzi (b. 1973, Frankfurt) began DJing at 14, co-founded the TAKSI label in 1995 and became a resident at Tresor the following year before joining Ostgut — the club that became Berghain — as one of its founding residents alongside Marcel Dettmann and Cora S. He has played Panorama Bar for two decades, prized for long, tension-building sets that rarely run under six hours, and produces widely across labels including Ostgut Ton, Cocoon, Cadenza and his own ARAS imprint (co-founded with Dana Ruh around 2010/2011). His debut solo album, Alcatraz, arrived in 2015.", "links": {"soundcloud": "https://soundcloud.com/andre-galluzzi", "instagram": "https://www.instagram.com/andregalluzzi_official/"}, "stats": {"performanceCount": 108, "firstPlayed": "2004-12-18", "isResident": false}, "photo": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQABOgE6AAD/4QLgRXhpZgAATU0AKgAAAAgACwEOAAIAAAAgAAAAkgEPAAIAAAAYAAAAsgEQAAIAAAARAAAAygESAAMAAAABAAEAAAEaAAUAAAABAAAA3AEbAAUAAAABAAAA5AEoAAMAAAABAAIAAAExAAIAAAAcAAAA7AEyAAIAAAAUAAABCAE7AAIAAAANAAABHIdpAAQAAAABAAABKgAAAABPTFlNUFVTIERJR0lUQUwgQ0FNRVJBICAgICAgICAgAE9MWU1QVVMgSU1BR0lORyBDT1JQLiAgAEUtNTIwICAgICAgICAgICAAAAAAAToAAAABAAABOgAAAAFBZG9iZSBQaG90b3Nob3AgQ1MzIFdpbmRvd3MAMjAwOTowNjoxNCAyMzowOTowMABaZWl0Zml4aWVyZXIAAAAcgpoABQAAAAEAAAKAgp0ABQAAAAEAAAKIiCIAAwAAAAEAAQAAiCcAAwAAAAEDIAAAkAAABwAAAAQwMjIxkAMAAgAAABQAAAKQkAQAAgAAABQAAAKkkQEABwAAAAQBAgMAkgQACgAAAAEAAAK4kgUABQAAAAEAAALAkgcAAwAAAAEABQAAkggAAwAAAAEAAAAAkgkAAwAAAAEACQAAkgoABQAAAAEAAALIoAAABwAAAAQwMTAwoAEAAwAAAAEAAQAAoAIABAAAAAEAAADIoAMABAAAAAEAAACWowAABwAAAAEDAAAApAEAAwAAAAEAAAAApAIAAwAAAAEAAQAApAMAAwAAAAEAAAAApAQABQAAAAEAAALQpAYAAwAAAAEAAAAApAcAAwAAAAEAAgAApAgAAwAAAAEAAAAApAkAAwAAAAEAAAAApAoAAwAAAAEAAAAAAAAAAAAAAAEAAAAFAAAAEAAAAAUyMDA5OjA2OjA3IDAyOjM3OjMxADIwMDk6MDY6MDcgMDI6Mzc6MzEAAAAAAAAAAAEAAAL5AAABAAAAACAAAAABAAAAAQAAAAH/4QzLaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJYTVAgQ29yZSA2LjAuMCI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnBob3Rvc2hvcD0iaHR0cDovL25zLmFkb2JlLmNvbS9waG90b3Nob3AvMS4wLyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iIHhtbG5zOklwdGM0eG1wQ29yZT0iaHR0cDovL2lwdGMub3JnL3N0ZC9JcHRjNHhtcENvcmUvMS4wL3htbG5zLyIgcGhvdG9zaG9wOkNyZWRpdD0iQ0MgQXR0cmlidXRpb24tU2hhcmVBbGlrZSAyLjAiIHBob3Rvc2hvcDpDYXB0aW9uV3JpdGVyPSJaZWl0Zml4aWVyZXIiIHBob3Rvc2hvcDpDaXR5PSJNYWdkZWJ1cmciIHBob3Rvc2hvcDpEYXRlQ3JlYXRlZD0iMjAwOS0wNi0wN1QwMjozNzozMSswMjowMCIgcGhvdG9zaG9wOlN0YXRlPSJTYWNoc2VuLUFuaGFsdCIgcGhvdG9zaG9wOkNvdW50cnk9Ikdlcm1hbnkiIHhtcDpNb2RpZnlEYXRlPSIyMDA5LTA2LTE0VDIzOjA5OjAwIiB4bXA6Q3JlYXRlRGF0ZT0iMjAwOS0wNi0wN1QwMjozNzozMSswMjowMCIgSXB0YzR4bXBDb3JlOkNvdW50cnlDb2RlPSJERVUiPiA8ZGM6c3ViamVjdD4gPHJkZjpCYWc+IDxyZGY6bGk+QWx0ZSBEaWFtYW50YnJhdWVyZWk8L3JkZjpsaT4gPHJkZjpsaT5Db21wbGV4PC9yZGY6bGk+IDxyZGY6bGk+RGlhbWFudGJyYXVlcmVpPC9yZGY6bGk+IDxyZGY6bGk+QW5kcmUgR2FsbHV6emk8L3JkZjpsaT4gPC9yZGY6QmFnPiA8L2RjOnN1YmplY3Q+IDxkYzpkZXNjcmlwdGlvbj4gPHJkZjpBbHQ+IDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCI+T0xZTVBVUyBESUdJVEFMIENBTUVSQSAgICAgICAgIDwvcmRmOmxpPiA8L3JkZjpBbHQ+IDwvZGM6ZGVzY3JpcHRpb24+IDxkYzpjcmVhdG9yPiA8cmRmOlNlcT4gPHJkZjpsaT5aZWl0Zml4aWVyZXI8L3JkZjpsaT4gPC9yZGY6U2VxPiA8L2RjOmNyZWF0b3I+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDw/eHBhY2tldCBlbmQ9InciPz4A/+0BalBob3Rvc2hvcCAzLjAAOEJJTQQEAAAAAAEyHAFaAAMbJUccAgAAAgACHAJQAAxaZWl0Zml4aWVyZXIcAj4ACDIwMDkwNjA3HAJ6AAxaZWl0Zml4aWVyZXIcAm4AHUNDIEF0dHJpYnV0aW9uLVNoYXJlQWxpa2UgMi4wHAJ4AB9PTFlNUFVTIERJR0lUQUwgQ0FNRVJBICAgICAgICAgHAI3AAgyMDA5MDYwNxwCGQAUQWx0ZSBEaWFtYW50YnJhdWVyZWkcAhkAB0NvbXBsZXgcAhkAD0RpYW1hbnRicmF1ZXJlaRwCGQAOQW5kcmUgR2FsbHV6emkcAjwACzAyMzczMSswMjAwHAJfAA5TYWNoc2VuLUFuaGFsdBwCZAADREVVHAI/AAswMjM3MzErMDIwMBwCWgAJTWFnZGVidXJnHAJlAAdHZXJtYW55OEJJTQQlAAAAAAAQvGfdIHeAkiMtY6Z6nRW2UP/AABEIAJYAyAMBIgACEQEDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAAX0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHB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"},
-  {"name": "Deepa", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["House", "Jazzy House", "Eclectic"], "blurb": "Sydney-based Kerfew co-founder and Club 77 resident bringing warm, genre-blurring house to her Berghain debut.", "bio": "Deepa (Deepa Alam) is a Sydney-based DJ, radio host and events producer, resident at Club 77 and host of FBi Radio's Thursday Sunset slot. She is the founder of the party Bypass and a co-founder of Kerfew, an Australia-wide creative collective of South Asian artists, and previously ran the neo-soul/jazzy-house duo project Honey Point. Her sets pull together clubby, naturalistic textures that play with density and intensity outside straight club and techno formulas, earning attention from Four Tet, John Talabot and Jayda G.", "links": {"soundcloud": "https://soundcloud.com/deepa-alam", "instagram": "https://www.instagram.com/omgdeepa/"}, "stats": {"performanceCount": 2, "firstPlayed": "2024-06-01", "isResident": false}},
-  {"name": "Franziska Berns", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Minimal House", "House", "Techno"], "blurb": "Frankfurt-to-Berlin transplant and former Robert Johnson resident spinning bouncy, bassline-driven minimal house.", "bio": "Franziska Berns grew up near Offenbach am Main and found her way into electronic music as a teenager, interning and then working at Frankfurt's Freebase Records shop, which led to early DJ appearances at Sven Väth's Cocoon Club. She studied art and humanities at Goethe University while establishing herself across Frankfurt/Offenbach venues from 2013, becoming a resident at the storied Robert Johnson club, before relocating to Berlin in autumn 2022. Citing Zip and Perlon as touchstones, her sound favors bouncy, emotionally-charged minimal house with strong basslines over current 'energetic' club trends.", "links": {"soundcloud": "https://soundcloud.com/franziskaberns", "instagram": "https://www.instagram.com/franziskaberns/"}, "stats": {"performanceCount": 6, "firstPlayed": "2024-11-09", "isResident": false}},
-  {"name": "HUNEE", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["House", "Disco", "Global Eclectic"], "blurb": "Bochum-born, Amsterdam-based selector celebrated for genre-fluid, deeply soulful marathon sets.", "bio": "Hunee grew up in Bochum to South Korean parents and moved to Berlin straight after school to dig for records and DJ across the city's clubs, initially producing hip-hop before shifting fully into music in his mid-twenties. He relocated to Amsterdam in 2014 and built close ties with Rush Hour co-founder Antal, releasing his acclaimed debut album Hunch Music via Rush Hour and further records on W.T. Records, Future Times, Internasjonal and Ostgut Ton. He also runs his own label and platform, Lifetones, and is known for expansive, unbounded sets spanning house, disco and beyond.", "links": {"soundcloud": "https://soundcloud.com/hunee", "instagram": "https://www.instagram.com/hunchmusic/"}, "stats": {"performanceCount": 15, "firstPlayed": "2009-10-10", "isResident": false}},
-  {"name": "Maruwa", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Trance", "Progressive House", "Techno"], "blurb": "St. Petersburg-born, Frankfurt-based producer channeling '90s/2000s rave nostalgia into forceful trance-tinged house and techno.", "bio": "Maruwa (Maria Believskaia) grew up in St. Petersburg, trained in classical piano and played keys in a rock band before her brother — a home-studio producer on the local underground circuit — introduced her to electronic music. She began as a producer, moving from big-room EDM through a jazzy hip-hop phase before a friend's introduction to lo-fi house led Mall Grab to sign her to his label Steel City Dance Discs, launching the Maruwa project; she has since released on Steel City Dance Discs and X-Kalay. Now based in Frankfurt, her sets fuse nostalgic '90s/2000s textures with modern trance, progressive house and techno.", "links": {"soundcloud": "https://soundcloud.com/maruwa1", "instagram": "https://www.instagram.com/maruwa.dj/"}},
-  {"name": "Mattias El Mansouri", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Deep House", "House", "Techno"], "blurb": "Stockholm-based Moroccan/Chilean producer weaving deep house, techno and ambient textures into introspective, rhythm-led sets.", "bio": "Mattias El Mansouri was born in the small Swedish town of Skene and is of Moroccan/Chilean descent; he moved to Stockholm, where he co-founded and organized the Ritmo Liminal club concept before shifting from record collecting into producing and DJing. He holds a degree in Theoretical Philosophy and is a resident at Stockholm's Under Bron/Trädgården, one of Sweden's key electronic-music incubators. His productions move between deep, driving rhythms and rich ambient textures, with releases including Tja Hej Salam on Aniara Recordings, a contribution to Nous'klaer Audio's Paraels III compilation, and the Sense Data EP on Phonica Records (March 2026).", "links": {"soundcloud": "https://soundcloud.com/mattiaselmansouri", "instagram": "https://www.instagram.com/mattiaselmansouri/"}, "stats": {"performanceCount": 3, "firstPlayed": "2025-02-01", "isResident": false}},
-  {"name": "Nicola Cruz", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["Andean Step", "Downtempo", "Global Bass"], "blurb": "Ecuadorian producer and pioneer of 'Andean Step,' fusing indigenous rhythms and folkloric instrumentation with deep electronic bass.", "bio": "Nicola Cruz was born to Ecuadorian parents in Limoges, France, and moved to Quito at age three, where he trained on percussion and grew fascinated with both electronic and folkloric music from around age 12. Nicolas Jaar heard an early tape and brought him on a US tour in 2012, launching his career; his 2013 Noise Within Us EP was followed by the breakthrough single 'Colibria' (2015, featuring Huaira Ukay) and the acclaimed debut album Prender el Alma on ZZK Records. His latest full-length, Kinesia, arrived in October 2024, continuing his signature blend of Andean cumbia rhythms, traditional Colombian vocal textures and minimalist electronic production.", "links": {"soundcloud": "https://soundcloud.com/nicolacruz", "instagram": "https://www.instagram.com/nicolacruzz/"}, "stats": {"performanceCount": 2, "firstPlayed": "2022-11-19", "isResident": false}},
-  {"name": "Zombies In Miami", "day": "saturday", "event": "Klubnacht", "room": "Panorama Bar", "tags": ["House", "Techno", "Disco"], "blurb": "Mexico-based duo Cani & Jenouise crafting hardware-only, synth-driven sets of tribal house, techno and disco.", "bio": "Zombies In Miami is the project of Mexican duo Cani and Jenouise, partners in music and life for over 17 years, working entirely with hardware — synths, drum machines and effects, no laptop, no sync — to respond live to the room rather than follow a fixed plan. Their rhythmic fusion of house, techno and disco draws on tribal percussion, analogue textures and deep melodic layers, with releases on Running Back, Permanent Vacation, Correspondant, Cómeme and Kompakt, including their cinematic debut album 2712 on Permanent Vacation. They also run Creatures of the Night, their own label and event series championing like-minded Latin American artists.", "links": {"soundcloud": "https://soundcloud.com/zombiesinmiami", "instagram": "https://www.instagram.com/zombiesinmiami/"}, "stats": {"performanceCount": 11, "firstPlayed": "2016-06-04", "isResident": false}}
-]
+{
+  "djs": {
+    "alix-perez": {
+      "name": "Alix Perez",
+      "tags": [
+        "Drum & Bass",
+        "Liquid Funk",
+        "Halftime"
+      ],
+      "blurb": "Belgian D&B don known for genre-crossing productions spanning liquid, halftime and beyond.",
+      "bio": "Alix Perez (Alix Depauw) is a Belgian drum & bass DJ/producer who began producing at 17 and released his debut album 1984 on Shogun Audio in 2009, followed by Chroma Chords in 2013. In 2016 he founded 1985 Music, a label and clothing imprint spanning drum & bass, dubstep, halftime and IDM. He has collaborated widely across the scene, including as one half of Shades with Eprom, and remains a respected voice for boundary-pushing D&B production.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/alixperez",
+        "instagram": "https://www.instagram.com/alixperez1985/",
+        "youtube": "https://www.youtube.com/watch?v=QJ0bAw80zFU"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "darwin": {
+      "name": "Darwin",
+      "tags": [
+        "Bass Music",
+        "Techno",
+        "Breaks"
+      ],
+      "blurb": "Berghain's REEF founder, weaving UK bass, breaks, techno and D&B into ocean-deep sets.",
+      "bio": "Darwin is a Canada-born, Berlin-based DJ, label head and event organizer who founded REEF in 2014, Berghain's dedicated night for UK bass culture spanning dubstep, jungle, breaks and drum & bass. Darwin also runs the SPE:C record label, launched in 2015, and more recently the label Biofield Records. Mixes for Fact (Fact Mix 870) and a Boiler Room x Dekmantel back-to-back set with re:ni showcase a style spanning dubstep, techno, breaks and UK garage.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/darwinspec",
+        "instagram": "https://www.instagram.com/darwin_reef/",
+        "youtube": "https://www.youtube.com/watch?v=gMWUlpIPqg0"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "dbridge": {
+      "name": "Dbridge",
+      "tags": [
+        "Drum & Bass",
+        "Autonomic",
+        "Techstep"
+      ],
+      "blurb": "Exit Records founder and Autonomic pioneer known for atmospheric, halfstep-leaning D&B.",
+      "bio": "dBridge (Darren White) is an English drum & bass producer active since the genre's early-1990s inception, first as one half of Sewer Monsters and then Future Forces Inc., before joining the D&B supergroup Bad Company UK in the late '90s. He left Bad Company in 2003 to found Exit Records, an outlet for a more experimental, atmospheric sound. In 2009 he and Instra:mental launched the influential Autonomic podcast and club night, showcased on FabricLive.50 in 2010.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/dbridge_exitrecords",
+        "youtube": "https://www.youtube.com/watch?v=mVPeJfk58JI"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "esposito": {
+      "name": "Esposito",
+      "tags": [
+        "Drum & Bass",
+        "Jungle",
+        "Dubstep"
+      ],
+      "blurb": "Berlin-based REEF resident spinning slow-building, tension-heavy Drum & Bass sets.",
+      "bio": "Ricardo Esposito is a Hamburg-born, Berlin-based DJ and mastering engineer who began mixing drum & bass, jungle and trip-hop around 2001 before relocating to Berlin in 2005. A resident DJ at Darwin's REEF party at Berghain, he plays almost exclusively drum & bass, building sets with slow-burning tension inspired by LTJ Bukem & MC Conrad's Progression Sessions series. He also works professionally as a mastering engineer for electronic music.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/esposito-2834",
+        "instagram": "https://www.instagram.com/es.po.si/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "headhunter": {
+      "name": "Headhunter",
+      "tags": [
+        "Dubstep",
+        "Jungle"
+      ],
+      "blurb": "Bristol dubstep originator revisiting the murky, jungle-inflected sound that built his name.",
+      "bio": "Headhunter is an alias of Bristol producer Antony 'Tony' Williams, who emerged in the mid-2000s with releases on Tempa including the Initiate EP (2007) and the album Nomad (2008), blending dubstep with jungle, techno and dubtech textures. He later moved into juke- and footwork-inflected sounds under the alias Addison Groove, but continues to perform and release as Headhunter, revisiting the darker, sub-heavy productions that built his reputation.",
+      "links": {
+        "youtube": "https://www.youtube.com/watch?v=WjaT_-vgQ9A"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Berghain"
+        }
+      ],
+      "photo": "assets/dj-photos/headhunter.jpg"
+    },
+    "arthur": {
+      "name": "Arthur",
+      "tags": [],
+      "blurb": "",
+      "bio": "",
+      "links": {},
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "carre": {
+      "name": "Carré",
+      "tags": [
+        "Dubstep",
+        "Bass Music",
+        "Leftfield Techno"
+      ],
+      "blurb": "Fast At Work co-founder and rising dubstep voice pushing the genre's foundations into bold new territory.",
+      "bio": "Carré (Carré Orenstein) is a US-born, London-based producer and DJ, and co-founder of Fast At Work, the underground party series and label that grew from Los Angeles into an internationally touring imprint. Her sound blends dubstep with percussive, higher-tempo leftfield techno, with releases including 2024's Soft Fascination and Air Sign on Darwin's SPE:C label, plus 2025 releases on the storied Tempa and on EMA's Woozy imprint. Named one of Mixmag's Top Artists to Watch in 2026, she has played Panorama Bar, FOLD, The White Hotel and Outlook Festival.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/carreo",
+        "instagram": "https://www.instagram.com/carre__carre"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "dubrunner": {
+      "name": "Dubrunner",
+      "tags": [
+        "Dub",
+        "Jungle",
+        "Soundsystem"
+      ],
+      "blurb": "Berlin-based Menace label boss channeling steppers dub, jungle and breakbeat through a modernist soundsystem lens.",
+      "bio": "Dubrunner (Charlie) is a UK-born, Berlin-based producer and DJ who runs the Menace label, an outlet for his take on dubwise soundsystem culture spanning steppers, dub and digi productions as a springboard into breakbeat hardcore, jungle and techno. He has shared bills with Iration Steppas, Goldie, Call Super and Addison Groove, with recent Menace releases including the Fallen Tree (2024) and Blackheart (2025) EPs. He describes his own sound as 'Industrial Reggae.'",
+      "links": {
+        "soundcloud": "https://soundcloud.com/dubrunneruk",
+        "instagram": "https://www.instagram.com/dubrunner___"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "jan-loup": {
+      "name": "Jan Loup",
+      "tags": [
+        "Dubstep",
+        "Drum & Bass",
+        "Halftime"
+      ],
+      "blurb": "Toulouse producer weaving modern dubstep, deep D&B and percussive halftime into immersive sonic collages.",
+      "bio": "Jan Loup is a Toulouse-based producer, DJ and sound technician active since 2018, working from a secluded hut studio to build sets that fuse modern dubstep, deep drum & bass, percussive halftime and tribal textures. An integral figure in Toulouse's alternative nightlife, she co-runs Le Comité Des Fêtes, a sound-system-culture collective, and is part of the ambient collective Aïra. She released her first EPs on Nerve Collect and Jupiter4 in 2024, followed by a collaborative EP with Beatrice M. on Priori's NAFF label and a release on the storied Tempa in 2025.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/janloup",
+        "instagram": "https://www.instagram.com/fauxbits999"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "le-motel-magugu": {
+      "name": "Le Motel & Magugu",
+      "tags": [
+        "Global Bass",
+        "Dub",
+        "Pidgin Rap"
+      ],
+      "blurb": "Brussels producer Le Motel and Cardiff-based pidgin-rap vocalist Magugu, longtime collaborators fusing organic percussion, dub weight and vocal bass.",
+      "bio": "Le Motel (Fabien Leclercq) is a Brussels-based producer, DJ and film composer whose work blends field-recorded, organic textures with footwork, dub, hip-hop and techno; he runs the Maloca label and released the acclaimed 2015 album OKA. Magugu is a Nigerian-born, Cardiff-based vocalist and 'pidgin rap' experimentalist fusing dancehall, grime, dub, hip-hop and drum & bass with Nigerian pidgin English, earning support from Gilles Peterson and Skrillex. The pair have collaborated since 2021, releasing the Kindness Weakness (2023) and Bitter Better (2025) EPs on Maloca, and appear at REEF as a dedicated back-to-back pairing.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/malocarecords/sets/magugu-le-motel-bitter-better",
+        "youtube": "https://www.youtube.com/watch?v=eRXIGxOD-jc"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-21",
+          "event": "REEF",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "amanda-mussi": {
+      "name": "Amanda Mussi",
+      "tags": [
+        "Techno",
+        "Acid",
+        "Breaks"
+      ],
+      "blurb": "Brazilian-Paraguayan, Berlin-based DJ known for hypnotic, tribal-percussion-driven techno all-nighters and closing sets.",
+      "bio": "Amanda Mussi is a Brazilian/Paraguayan DJ, producer and label/agency head based in Berlin, known for deep, driving techno sets that blend Detroit's mechanical influences with UK soundscapes, tribal percussion and layered vocals. Before relocating to Europe she was a fixture of São Paulo's queer underground scene, running the monthly party Dûsk for five years and holding residencies at Mamba Negra, Dando and Kode. She has become one of the first female Brazilian DJs to play multiple times on Berghain's main floor, recently earning her first closing set there, and runs the South American booking agency Alt alongside the Macro Hits label.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/ohmussi",
+        "instagram": "https://www.instagram.com/ohmussi/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "stats": {
+        "performanceCount": 11,
+        "firstPlayed": "2018-08-25",
+        "isResident": false
+      }
+    },
+    "andy-martin": {
+      "name": "Andy Martin",
+      "tags": [
+        "Techno",
+        "Sci-Fi Techno",
+        "Ambient"
+      ],
+      "blurb": "Mexican-Jamaican producer fusing sci-fi techno with Latin American, Caribbean and Native American futurist narratives.",
+      "bio": "Andy Martin is a Mexico City-based Mexican-Jamaican DJ and producer whose work merges sci-fi techno with Latin American and Caribbean sounds, casting rich, mysterious atmospheres over deep sonic structures. His 2022 debut album Antiguos Astronautas, released on his own label Diaspora Echoes, imagines an advanced pre-Columbian civilization and earned support from DVS1, Nastia, Ben UFO and Richie Hawtin, with airplay in clubs including Berghain, Tresor and Fabric. He has also released ambient work as The Language of Sound and performed at MUTEK festivals in Mexico and Japan; his Klubnacht booking marked his Berghain debut.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/andy-martin",
+        "instagram": "https://www.instagram.com/4ndym4rtin/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "stats": {
+        "performanceCount": 6,
+        "firstPlayed": "2024-09-21",
+        "isResident": false
+      }
+    },
+    "banu": {
+      "name": "Banu",
+      "tags": [
+        "Techno",
+        "Experimental Electronics",
+        "Modular Synth"
+      ],
+      "blurb": "Berlin-based artist and activist channeling trippy techno and analog-synth soundscapes into a platform for trans solidarity.",
+      "bio": "Banu (Banu Çiçek Tülü) is a Berlin-based DJ, producer, artist and researcher born in southeast Anatolia, whose work straddles trippy techno, experimental electronics and activism. Her 2022 debut album TransSoundScapes, released on Intergalactic Research Institute for Sound, is built from ARP 2600 synth textures, field recordings and voices, conceived as an act of solidarity between her as a migrant woman and the trans community around her. She played her first Berghain Klubnacht set in January 2026, having previously appeared at the club's 20th-anniversary Elektroakustischer Salon in December 2024.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/banusound",
+        "instagram": "https://www.instagram.com/banusoundd/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "stats": {
+        "performanceCount": 1,
+        "firstPlayed": "2026-01-24",
+        "isResident": false
+      }
+    },
+    "dj-maria": {
+      "name": "DJ Maria.",
+      "tags": [
+        "Techno",
+        "Trance",
+        "Acid"
+      ],
+      "blurb": "Osaka-born, Tokyo-based techno artist weaving groovy rhythms and trance-inflected storytelling into immersive sets.",
+      "bio": "DJ MARIA. is a Tokyo-based techno DJ and producer, originally from Osaka, who discovered dance music through psytrance at 13 and began DJing in 2014. Her sets fuse acid, trance and techno into immersive, psychedelic-leaning journeys, and she has played clubs including Bassiani, FOLD, Acquario Masada and the former De School alongside her Berghain appearances. She co-founded the Japanese forest festivals Moment and Transcendance, and released the Acid Sunrise EP on Beyond the Galaxy.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/djmaria-jp",
+        "instagram": "https://www.instagram.com/mariasatelles/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "stats": {
+        "performanceCount": 11,
+        "firstPlayed": "2023-02-25",
+        "isResident": false
+      }
+    },
+    "kaiser": {
+      "name": "Kaiser",
+      "tags": [
+        "Techno",
+        "Minimal Techno",
+        "Ambient"
+      ],
+      "blurb": "Italian producer and K S R label founder moving from ambient electronica into minimal techno and groovy breakbeats.",
+      "bio": "Kaiser (Gianluca Caiati) is an Italian DJ and producer, born and raised in southern Italy, who based himself in Berlin from 2019 to 2025 and now splits time between Italy and Portugal while still calling Berlin home. In 2017 he founded the label K S R (Kaiser Sound Records), a platform for emerging techno artists, and in 2021 launched the duo project Force Reaction with fellow producer Kwartz. He made his Berghain debut on 5 August 2023, opening a Klubnacht with a four-hour set moving from ambient electronica through minimal techno into groovy breakbeats.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/kaiserksr_it",
+        "instagram": "https://www.instagram.com/kaiser_ksr/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "stats": {
+        "performanceCount": 6,
+        "firstPlayed": "2023-08-05",
+        "isResident": false
+      }
+    },
+    "kwartz": {
+      "name": "Kwartz",
+      "tags": [
+        "Techno",
+        "Dark Techno",
+        "Minimal"
+      ],
+      "blurb": "Madrid-born, Berlin-based PoleGroup artist crafting dark, visceral techno alongside his Order&Devotion label.",
+      "bio": "Kwartz (Mario Campos) is a Madrid-born, Berlin-based techno DJ and producer who joined Oscar Mulero's PoleGroup in 2013, becoming a regular presence on the label's roster. He founded his own label, Order&Devotion, in 2016, releasing music that moves between dark atmospheres and deep, visceral sound, with further releases appearing on SK_Eleven, Mord Records, Semantica and Warm Up Recordings. In 2021 he launched the duo project Force Reaction with Kaiser, oriented toward a more classic techno sound.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/kwartz",
+        "instagram": "https://www.instagram.com/kwartz_/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "stats": {
+        "performanceCount": 13,
+        "firstPlayed": "2023-05-06",
+        "isResident": false
+      }
+    },
+    "norman-nodge": {
+      "name": "Norman Nodge",
+      "tags": [
+        "Techno",
+        "Detroit Techno",
+        "Chicago House"
+      ],
+      "blurb": "Berghain resident since 2005, blending classic Detroit techno and Chicago house into legendary warm-up sets.",
+      "bio": "Norman Nodge is a Leipzig-born, Brandenburg-raised DJ and lawyer who caught the techno bug after the fall of the Wall, promoting parties from 1994 onward where he crossed paths with, and became a mentor to, Marcel Fengler and Marcel Dettmann. After stepping back from nightlife in the late '90s to pursue law and family life, he was pitched to Berghain's management by Dettmann and became a resident DJ instantaneously in 2005, since then playing roughly once a month and specializing in the art of warming up a night. His style fuses classic Detroit techno (Jeff Mills, Robert Hood, 430 West) and Chicago house (Relief, Dance Mania) with new material, never shying from unusual sounds away from current trends.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/norman-nodge",
+        "instagram": "https://www.instagram.com/norman_nodge/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "stats": {
+        "performanceCount": 200,
+        "firstPlayed": "2005-02-12",
+        "isResident": true
+      }
+    },
+    "andre-galluzzi": {
+      "name": "André Galluzzi",
+      "tags": [
+        "Techno",
+        "House",
+        "Minimal House"
+      ],
+      "blurb": "Frankfurt-born Ostgut/Berghain founding-era resident famed for epic, slow-building sets that can run six hours or more.",
+      "bio": "André Galluzzi (b. 1973, Frankfurt) began DJing at 14, co-founded the TAKSI label in 1995 and became a resident at Tresor the following year before joining Ostgut — the club that became Berghain — as one of its founding residents alongside Marcel Dettmann and Cora S. He has played Panorama Bar for two decades, prized for long, tension-building sets that rarely run under six hours, and produces widely across labels including Ostgut Ton, Cocoon, Cadenza and his own ARAS imprint (co-founded with Dana Ruh around 2010/2011). His debut solo album, Alcatraz, arrived in 2015.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/andre-galluzzi",
+        "instagram": "https://www.instagram.com/andregalluzzi_official/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ],
+      "stats": {
+        "performanceCount": 108,
+        "firstPlayed": "2004-12-18",
+        "isResident": false
+      },
+      "photo": "assets/dj-photos/andre-galluzzi.jpg"
+    },
+    "deepa": {
+      "name": "Deepa",
+      "tags": [
+        "House",
+        "Jazzy House",
+        "Eclectic"
+      ],
+      "blurb": "Sydney-based Kerfew co-founder and Club 77 resident bringing warm, genre-blurring house to her Berghain debut.",
+      "bio": "Deepa (Deepa Alam) is a Sydney-based DJ, radio host and events producer, resident at Club 77 and host of FBi Radio's Thursday Sunset slot. She is the founder of the party Bypass and a co-founder of Kerfew, an Australia-wide creative collective of South Asian artists, and previously ran the neo-soul/jazzy-house duo project Honey Point. Her sets pull together clubby, naturalistic textures that play with density and intensity outside straight club and techno formulas, earning attention from Four Tet, John Talabot and Jayda G.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/deepa-alam",
+        "instagram": "https://www.instagram.com/omgdeepa/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ],
+      "stats": {
+        "performanceCount": 2,
+        "firstPlayed": "2024-06-01",
+        "isResident": false
+      }
+    },
+    "franziska-berns": {
+      "name": "Franziska Berns",
+      "tags": [
+        "Minimal House",
+        "House",
+        "Techno"
+      ],
+      "blurb": "Frankfurt-to-Berlin transplant and former Robert Johnson resident spinning bouncy, bassline-driven minimal house.",
+      "bio": "Franziska Berns grew up near Offenbach am Main and found her way into electronic music as a teenager, interning and then working at Frankfurt's Freebase Records shop, which led to early DJ appearances at Sven Väth's Cocoon Club. She studied art and humanities at Goethe University while establishing herself across Frankfurt/Offenbach venues from 2013, becoming a resident at the storied Robert Johnson club, before relocating to Berlin in autumn 2022. Citing Zip and Perlon as touchstones, her sound favors bouncy, emotionally-charged minimal house with strong basslines over current 'energetic' club trends.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/franziskaberns",
+        "instagram": "https://www.instagram.com/franziskaberns/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ],
+      "stats": {
+        "performanceCount": 6,
+        "firstPlayed": "2024-11-09",
+        "isResident": false
+      }
+    },
+    "hunee": {
+      "name": "HUNEE",
+      "tags": [
+        "House",
+        "Disco",
+        "Global Eclectic"
+      ],
+      "blurb": "Bochum-born, Amsterdam-based selector celebrated for genre-fluid, deeply soulful marathon sets.",
+      "bio": "Hunee grew up in Bochum to South Korean parents and moved to Berlin straight after school to dig for records and DJ across the city's clubs, initially producing hip-hop before shifting fully into music in his mid-twenties. He relocated to Amsterdam in 2014 and built close ties with Rush Hour co-founder Antal, releasing his acclaimed debut album Hunch Music via Rush Hour and further records on W.T. Records, Future Times, Internasjonal and Ostgut Ton. He also runs his own label and platform, Lifetones, and is known for expansive, unbounded sets spanning house, disco and beyond.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/hunee",
+        "instagram": "https://www.instagram.com/hunchmusic/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ],
+      "stats": {
+        "performanceCount": 15,
+        "firstPlayed": "2009-10-10",
+        "isResident": false
+      }
+    },
+    "maruwa": {
+      "name": "Maruwa",
+      "tags": [
+        "Trance",
+        "Progressive House",
+        "Techno"
+      ],
+      "blurb": "St. Petersburg-born, Frankfurt-based producer channeling '90s/2000s rave nostalgia into forceful trance-tinged house and techno.",
+      "bio": "Maruwa (Maria Believskaia) grew up in St. Petersburg, trained in classical piano and played keys in a rock band before her brother — a home-studio producer on the local underground circuit — introduced her to electronic music. She began as a producer, moving from big-room EDM through a jazzy hip-hop phase before a friend's introduction to lo-fi house led Mall Grab to sign her to his label Steel City Dance Discs, launching the Maruwa project; she has since released on Steel City Dance Discs and X-Kalay. Now based in Frankfurt, her sets fuse nostalgic '90s/2000s textures with modern trance, progressive house and techno.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/maruwa1",
+        "instagram": "https://www.instagram.com/maruwa.dj/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "mattias-el-mansouri": {
+      "name": "Mattias El Mansouri",
+      "tags": [
+        "Deep House",
+        "House",
+        "Techno"
+      ],
+      "blurb": "Stockholm-based Moroccan/Chilean producer weaving deep house, techno and ambient textures into introspective, rhythm-led sets.",
+      "bio": "Mattias El Mansouri was born in the small Swedish town of Skene and is of Moroccan/Chilean descent; he moved to Stockholm, where he co-founded and organized the Ritmo Liminal club concept before shifting from record collecting into producing and DJing. He holds a degree in Theoretical Philosophy and is a resident at Stockholm's Under Bron/Trädgården, one of Sweden's key electronic-music incubators. His productions move between deep, driving rhythms and rich ambient textures, with releases including Tja Hej Salam on Aniara Recordings, a contribution to Nous'klaer Audio's Paraels III compilation, and the Sense Data EP on Phonica Records (March 2026).",
+      "links": {
+        "soundcloud": "https://soundcloud.com/mattiaselmansouri",
+        "instagram": "https://www.instagram.com/mattiaselmansouri/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ],
+      "stats": {
+        "performanceCount": 3,
+        "firstPlayed": "2025-02-01",
+        "isResident": false
+      }
+    },
+    "nicola-cruz": {
+      "name": "Nicola Cruz",
+      "tags": [
+        "Andean Step",
+        "Downtempo",
+        "Global Bass"
+      ],
+      "blurb": "Ecuadorian producer and pioneer of 'Andean Step,' fusing indigenous rhythms and folkloric instrumentation with deep electronic bass.",
+      "bio": "Nicola Cruz was born to Ecuadorian parents in Limoges, France, and moved to Quito at age three, where he trained on percussion and grew fascinated with both electronic and folkloric music from around age 12. Nicolas Jaar heard an early tape and brought him on a US tour in 2012, launching his career; his 2013 Noise Within Us EP was followed by the breakthrough single 'Colibria' (2015, featuring Huaira Ukay) and the acclaimed debut album Prender el Alma on ZZK Records. His latest full-length, Kinesia, arrived in October 2024, continuing his signature blend of Andean cumbia rhythms, traditional Colombian vocal textures and minimalist electronic production.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/nicolacruz",
+        "instagram": "https://www.instagram.com/nicolacruzz/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ],
+      "stats": {
+        "performanceCount": 2,
+        "firstPlayed": "2022-11-19",
+        "isResident": false
+      }
+    },
+    "zombies-in-miami": {
+      "name": "Zombies In Miami",
+      "tags": [
+        "House",
+        "Techno",
+        "Disco"
+      ],
+      "blurb": "Mexico-based duo Cani & Jenouise crafting hardware-only, synth-driven sets of tribal house, techno and disco.",
+      "bio": "Zombies In Miami is the project of Mexican duo Cani and Jenouise, partners in music and life for over 17 years, working entirely with hardware — synths, drum machines and effects, no laptop, no sync — to respond live to the room rather than follow a fixed plan. Their rhythmic fusion of house, techno and disco draws on tribal percussion, analogue textures and deep melodic layers, with releases on Running Back, Permanent Vacation, Correspondant, Cómeme and Kompakt, including their cinematic debut album 2712 on Permanent Vacation. They also run Creatures of the Night, their own label and event series championing like-minded Latin American artists.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/zombiesinmiami",
+        "instagram": "https://www.instagram.com/zombiesinmiami/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-22",
+          "event": "Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ],
+      "stats": {
+        "performanceCount": 11,
+        "firstPlayed": "2016-06-04",
+        "isResident": false
+      }
+    }
+  },
+  "days": [
+    {
+      "date": "2026-08-21",
+      "weekday": "FRI",
+      "event": "REEF",
+      "rooms": [
+        {
+          "room": "Berghain",
+          "djSlugs": [
+            "alix-perez",
+            "darwin",
+            "dbridge",
+            "esposito",
+            "headhunter"
+          ]
+        },
+        {
+          "room": "Panorama Bar",
+          "djSlugs": [
+            "arthur",
+            "carre",
+            "dubrunner",
+            "jan-loup",
+            "le-motel-magugu"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "weekday": "SAT",
+      "event": "Klubnacht",
+      "rooms": [
+        {
+          "room": "Berghain",
+          "djSlugs": [
+            "amanda-mussi",
+            "andy-martin",
+            "banu",
+            "dj-maria",
+            "kaiser",
+            "kwartz",
+            "norman-nodge"
+          ]
+        },
+        {
+          "room": "Panorama Bar",
+          "djSlugs": [
+            "andre-galluzzi",
+            "deepa",
+            "franziska-berns",
+            "hunee",
+            "maruwa",
+            "mattias-el-mansouri",
+            "nicola-cruz",
+            "zombies-in-miami"
+          ]
+        }
+      ]
+    }
+  ]
+}
