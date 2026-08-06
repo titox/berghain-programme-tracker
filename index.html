@@ -25,6 +25,7 @@
     --berghain: #8fb4c9;
     --panorama: #d98f3d;
     --rule: #38373d;
+    --room-accent: var(--berghain);
     --font: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --space-2: 8px;
     --space-3: 16px;
@@ -229,10 +230,35 @@
   .field-row-2 > * { flex: 1; min-width: 0; }
   .field-row-2-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
 
-  .range-field { margin-bottom: var(--space-3); }
-  .range-field-label { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-  .range-field-label b { color: var(--fg); font-variant-numeric: tabular-nums; }
-  .range-field input[type="range"] { width: 100%; accent-color: var(--berghain); }
+  .range-field-label {
+    font-size: 13px; color: var(--fg); margin-bottom: var(--space-2);
+    font-variant-numeric: tabular-nums;
+  }
+  .dual-range { position: relative; height: 24px; }
+  .dual-range-track {
+    position: absolute; top: 50%; left: 0; right: 0; height: 3px;
+    background: var(--rule); transform: translateY(-50%); pointer-events: none;
+  }
+  .dual-range-fill {
+    position: absolute; top: 50%; height: 3px;
+    background: var(--berghain); transform: translateY(-50%); pointer-events: none;
+  }
+  .dual-range input[type="range"] {
+    position: absolute; top: 0; left: 0; width: 100%; height: 24px; margin: 0;
+    background: transparent; pointer-events: none;
+    -webkit-appearance: none; appearance: none;
+  }
+  .dual-range input[type="range"]::-webkit-slider-runnable-track { background: transparent; }
+  .dual-range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; pointer-events: auto;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--fg); border: 2px solid var(--bg); cursor: pointer; margin-top: -6.5px;
+  }
+  .dual-range input[type="range"]::-moz-range-track { background: transparent; border: none; }
+  .dual-range input[type="range"]::-moz-range-thumb {
+    pointer-events: auto; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--fg); border: 2px solid var(--bg); cursor: pointer;
+  }
 
   .tag-toggle {
     display: inline-block; padding: 3px 9px; font-size: 11px; text-transform: uppercase;
@@ -303,12 +329,11 @@
     </div>
     <div class="field">
       <label class="field-label">Klubnacht performances</label>
-      <div class="range-field">
-        <div class="range-field-label"><span>Min</span><b id="search-perf-min-val">0</b></div>
+      <div class="range-field-label"><span id="search-perf-min-val">0</span> &#8211; <span id="search-perf-max-val">0</span></div>
+      <div class="dual-range">
+        <div class="dual-range-track"></div>
+        <div class="dual-range-fill" id="search-perf-fill"></div>
         <input type="range" id="search-perf-min" min="0" max="0" value="0">
-      </div>
-      <div class="range-field">
-        <div class="range-field-label"><span>Max</span><b id="search-perf-max-val">0</b></div>
         <input type="range" id="search-perf-max" min="0" max="0" value="0">
       </div>
     </div>
@@ -474,6 +499,17 @@ const searchState = { name: '', dateFrom: '', dateTo: '', perfMin: 0, perfMax: 0
 let searchOpen = false;
 let searchTagsRendered = false;
 
+function updatePerfFill() {
+  const minSlider = document.getElementById('search-perf-min');
+  const maxSlider = document.getElementById('search-perf-max');
+  const range = Number(minSlider.max) || 1;
+  const leftPct = (Number(minSlider.value) / range) * 100;
+  const rightPct = (Number(maxSlider.value) / range) * 100;
+  const fill = document.getElementById('search-perf-fill');
+  fill.style.left = `${leftPct}%`;
+  fill.style.width = `${Math.max(0, rightPct - leftPct)}%`;
+}
+
 function renderTagOptions() {
   const allTags = new Set();
   Object.values(DATA.djs).forEach(dj => (dj.tags || []).forEach(t => allTags.add(t)));
@@ -508,6 +544,7 @@ function renderTagOptions() {
   maxSlider.value = String(maxCount);
   searchState.perfMax = maxCount;
   document.getElementById('search-perf-max-val').textContent = String(maxCount);
+  updatePerfFill();
   searchTagsRendered = true;
 }
 
@@ -589,6 +626,7 @@ document.getElementById('search-perf-min').addEventListener('input', (e) => {
     document.getElementById('search-perf-max-val').textContent = String(searchState.perfMax);
   }
   document.getElementById('search-perf-min-val').textContent = String(searchState.perfMin);
+  updatePerfFill();
   renderSearchResults();
 });
 document.getElementById('search-perf-max').addEventListener('input', (e) => {
@@ -599,6 +637,7 @@ document.getElementById('search-perf-max').addEventListener('input', (e) => {
     document.getElementById('search-perf-min-val').textContent = String(searchState.perfMin);
   }
   document.getElementById('search-perf-max-val').textContent = String(searchState.perfMax);
+  updatePerfFill();
   renderSearchResults();
 });
 document.getElementById('search-tags').addEventListener('click', (e) => {
