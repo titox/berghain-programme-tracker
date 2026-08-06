@@ -85,6 +85,13 @@ trailing hyphens (e.g. `"André Galluzzi"` → `"andre-galluzzi"`).
     residents list, `false` otherwise (never omitted; the validator
     requires all three keys whenever `stats` is present). If not found:
     omit the `stats` key entirely.
+  - `nationality`: the DJ's nationality, if you can confidently establish
+    it from their bio/press (not just a guess from name or label
+    location). `{"code": "<2-letter ISO 3166-1 alpha-2, uppercase>",
+    "name": "<country name>"}`, e.g. `{"code": "LB", "name": "Lebanon"}`.
+    Renders as a small flag badge on the DJ's avatar. If uncertain or not
+    found: omit the key entirely — a wrong flag is worse than no flag,
+    same standard as everything else here.
   - `appearances`: a single entry for this date/event/room.
 
 **Budget guard:** if a single week's new listings pull in an unusually

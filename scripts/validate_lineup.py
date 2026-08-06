@@ -43,6 +43,13 @@ def check(data):
             for k in ("performanceCount", "firstPlayed", "isResident"):
                 if k not in dj["stats"]:
                     errors.append(f"djs.{slug}: stats missing '{k}'")
+        if "nationality" in dj:
+            for k in ("code", "name"):
+                if not dj["nationality"].get(k):
+                    errors.append(f"djs.{slug}: nationality missing '{k}'")
+            code = dj["nationality"].get("code", "")
+            if code and not re.match(r"^[A-Z]{2}$", code):
+                errors.append(f"djs.{slug}: nationality.code '{code}' is not a 2-letter ISO code")
 
     seen_dates = set()
     prev_date = None

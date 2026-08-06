@@ -177,6 +177,15 @@
     display: flex; align-items: center; justify-content: center;
     font-weight: 700; font-size: 13px; letter-spacing: 0.02em;
     background: var(--room-accent); color: var(--bg);
+    position: relative;
+  }
+  .avatar-flag {
+    position: absolute; right: -4px; bottom: -4px;
+    width: 17px; height: 17px; border-radius: 50%;
+    background: var(--surface); border: 2px solid var(--surface);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; line-height: 1;
+    box-shadow: 0 0 0 1px var(--rule);
   }
 </style>
 
@@ -218,6 +227,11 @@ function getInitials(name) {
   return w.slice(0, 2).toUpperCase();
 }
 
+function flagEmoji(code) {
+  if (!/^[A-Z]{2}$/.test(code || '')) return '';
+  return String.fromCodePoint(...[...code].map(c => 0x1F1E6 + c.charCodeAt(0) - 65));
+}
+
 const LINK_LABELS = [
   ['soundcloud', 'Soundcloud'],
   ['bandcamp', 'Bandcamp'],
@@ -248,9 +262,14 @@ function renderRow(slug) {
   return `
     <div class="dj-row${hasDetail ? '' : ' dj-row--empty'}">
       <div class="dj-summary">
-        ${dj.photo
-          ? `<img class="dj-avatar" src="${dj.photo}" alt="" />`
-          : `<div class="dj-avatar">${esc(getInitials(dj.name))}</div>`}
+        <div class="dj-avatar">
+          ${dj.photo
+            ? `<img src="${dj.photo}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />`
+            : esc(getInitials(dj.name))}
+          ${dj.nationality
+            ? `<span class="avatar-flag" title="${esc(dj.nationality.name)}">${flagEmoji(dj.nationality.code)}</span>`
+            : ''}
+        </div>
         <span class="dj-name">${esc(dj.name)}</span>${tags}
       </div>
       <div class="dj-detail">

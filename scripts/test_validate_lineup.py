@@ -71,6 +71,23 @@ class ValidateLineupTests(unittest.TestCase):
         errors = check(data)
         self.assertTrue(any("stats missing" in e for e in errors))
 
+    def test_nationality_valid_passes(self):
+        data = minimal_data()
+        data["djs"]["test-dj"]["nationality"] = {"code": "LB", "name": "Lebanon"}
+        self.assertEqual(check(data), [])
+
+    def test_nationality_missing_name_fails(self):
+        data = minimal_data()
+        data["djs"]["test-dj"]["nationality"] = {"code": "LB"}
+        errors = check(data)
+        self.assertTrue(any("nationality missing 'name'" in e for e in errors))
+
+    def test_nationality_bad_code_fails(self):
+        data = minimal_data()
+        data["djs"]["test-dj"]["nationality"] = {"code": "LBN", "name": "Lebanon"}
+        errors = check(data)
+        self.assertTrue(any("not a 2-letter ISO code" in e for e in errors))
+
     def test_days_out_of_order_fails(self):
         data = minimal_data()
         data["djs"]["second-dj"] = {
