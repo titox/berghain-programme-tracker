@@ -48,6 +48,16 @@
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+  body.search-open .toggle-btn {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .search-reset-btn {
+    background: none; border: none; color: var(--muted); font-family: var(--font);
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: underline;
+    cursor: pointer; padding: 0; margin-right: var(--space-3);
+  }
+  .search-reset-btn:hover { color: var(--fg); }
   .toggle-btn {
     flex: none;
     white-space: nowrap;
@@ -313,7 +323,10 @@
 <aside class="search-panel" id="search-panel" aria-hidden="true">
   <div class="search-panel-head">
     <span class="search-panel-title">Search &amp; Filter</span>
-    <button class="search-panel-close" id="search-close" aria-label="Close">&times;</button>
+    <div>
+      <button class="search-reset-btn" id="search-reset" type="button">Reset</button>
+      <button class="search-panel-close" id="search-close" aria-label="Close">&times;</button>
+    </div>
   </div>
   <div class="search-panel-body">
     <div class="field">
@@ -481,11 +494,9 @@ function setDay(date) {
 let currentDate = null;
 
 document.getElementById('toggle').addEventListener('click', (e) => {
+  if (searchOpen) return;
   const btn = e.target.closest('.toggle-btn');
-  if (btn) {
-    if (searchOpen) closeSearchPanel();
-    setDay(btn.dataset.date);
-  }
+  if (btn) setDay(btn.dataset.date);
 });
 
 document.addEventListener('click', (e) => {
@@ -586,8 +597,28 @@ function openSearchPanel() {
   document.getElementById('search-name').focus();
 }
 
+function resetSearchFilters() {
+  searchState.name = '';
+  searchState.dateFrom = '';
+  searchState.dateTo = '';
+  searchState.tags.clear();
+  document.getElementById('search-name').value = '';
+  document.getElementById('search-date-from').value = '';
+  document.getElementById('search-date-to').value = '';
+  document.querySelectorAll('#search-tags .tag-toggle.active').forEach(b => b.classList.remove('active'));
+  const maxCount = Number(document.getElementById('search-perf-min').max) || 0;
+  searchState.perfMin = 0;
+  searchState.perfMax = maxCount;
+  document.getElementById('search-perf-min').value = '0';
+  document.getElementById('search-perf-max').value = String(maxCount);
+  document.getElementById('search-perf-min-val').textContent = '0';
+  document.getElementById('search-perf-max-val').textContent = String(maxCount);
+  updatePerfFill();
+}
+
 function closeSearchPanel() {
   searchOpen = false;
+  if (searchTagsRendered) resetSearchFilters();
   document.getElementById('search-panel').classList.remove('open');
   document.getElementById('search-panel').setAttribute('aria-hidden', 'true');
   document.getElementById('search-open').classList.remove('active');
@@ -602,6 +633,10 @@ document.getElementById('search-open').addEventListener('click', () => {
   if (searchOpen) closeSearchPanel(); else openSearchPanel();
 });
 document.getElementById('search-close').addEventListener('click', closeSearchPanel);
+document.getElementById('search-reset').addEventListener('click', () => {
+  resetSearchFilters();
+  renderSearchResults();
+});
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && searchOpen) closeSearchPanel();
 });
