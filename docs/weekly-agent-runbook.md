@@ -1,18 +1,24 @@
-# Monthly Programme Update — Agent Runbook
+# Weekly Programme Update — Agent Runbook
 
-Run on the 1st of every month at 00:01. Working directory: this repo
+Run every Monday at 00:01 UTC. Working directory: this repo
 (`brg tracker`), on the branch Vercel deploys from.
+
+Runs weekly rather than monthly specifically to keep each run's DJ-research
+batch small (roughly a weekend's worth of nights, not a whole month at
+once) — a full-month batch was tried and repeatedly exhausted the session's
+web-search budget before finishing. Weekly keeps each run inside a
+sustainable size.
 
 ## 1. Fetch the programme
 
 Fetch `https://www.berghain.berlin/en/program/`. Identify every listing
 currently shown on the page — club nights, closing parties, one-off
 label nights, concerts, closed days, all of it — regardless of which
-month it falls in. Step 2 already skips any date already archived, so
-scoping this to "the current month" is unnecessary and would create
-permanent gaps if the page hasn't published the full month yet when
-this runs; fetching everything shown makes each run self-healing for
-whatever the page currently displays, old or new.
+week or month it falls in. Step 2 already skips any date already
+archived, so scoping this to "this week" is unnecessary and would create
+permanent gaps if a date isn't published yet when this runs; fetching
+everything shown makes each run self-healing for whatever the page
+currently displays, old or new.
 
 If the fetch fails (unreachable, unexpected structure) after one retry:
 **stop here**. Do not write or commit anything. Send a failure
@@ -23,7 +29,8 @@ retried by hand.
 
 Read `data/lineup.json`. For each listing found in Step 1, check whether
 its date already exists in `days[]`. Skip any date already present (this
-makes the run safe to retry or re-trigger without duplicating data).
+makes the run safe to retry or re-trigger without duplicating data, and
+is what keeps each week's batch limited to only what's actually new).
 
 ## 3. Record each new day
 
@@ -68,11 +75,22 @@ trailing hyphens (e.g. `"André Galluzzi"` → `"andre-galluzzi"`).
     `assets/dj-photos/CREDITS.md` in the same format as the existing
     entries. If not found: omit `photo` entirely — the page already
     falls back to an initials tile.
-  - `stats`: query the berghain-database API
-    (`https://berghain.ravers.workers.dev`) for this DJ's Klubnacht
-    performance history. If found: `{"performanceCount", "firstPlayed",
-    "isResident"}`. If not found: omit the key entirely.
+  - `stats`: query the berghain-database API directly
+    (`https://berghain.ravers.workers.dev/api/artists?search=<name>` for
+    the artist id, then `.../api/artists/<id>/performances` for their
+    history, and `.../api/residents/current` for resident status) — this
+    is a plain REST/JSON API, call it directly rather than via a web
+    search. If found: `{"performanceCount", "firstPlayed", "isResident"}`
+    (`isResident` only set when the name appears in the residents list —
+    omit it otherwise, don't set it to false). If not found: omit the
+    key entirely.
   - `appearances`: a single entry for this date/event/room.
+
+**Budget guard:** if a single week's new listings pull in an unusually
+large number of new DJ names (e.g. more than ~30, such as after a missed
+week or two), split the research in Step 4 into smaller sequential
+batches rather than researching all of them in one pass — do not let a
+single run's web-search usage balloon just because the backlog is large.
 
 ## 5. Validate before writing anything live
 
@@ -83,10 +101,10 @@ not commit, send a failure notification with the validator's output.
 
 ```bash
 git add data/lineup.json assets/dj-photos/
-git commit -m "Add <Month Year> programme"
+git commit -m "Add programme: <list the new dates, e.g. 2026-09-04, 2026-09-05>"
 git push
 ```
 
 If nothing changed in Step 3 (e.g. the programme page hasn't been updated
-yet for the new month), skip the commit entirely — an empty run is not a
+since last week's run), skip the commit entirely — an empty run is not a
 failure.
