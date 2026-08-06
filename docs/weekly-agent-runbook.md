@@ -81,9 +81,10 @@ trailing hyphens (e.g. `"André Galluzzi"` → `"andre-galluzzi"`).
     history, and `.../api/residents/current` for resident status) — this
     is a plain REST/JSON API, call it directly rather than via a web
     search. If found: `{"performanceCount", "firstPlayed", "isResident"}`
-    (`isResident` only set when the name appears in the residents list —
-    omit it otherwise, don't set it to false). If not found: omit the
-    key entirely.
+    — `isResident` is always present, `true` if the name appears in the
+    residents list, `false` otherwise (never omitted; the validator
+    requires all three keys whenever `stats` is present). If not found:
+    omit the `stats` key entirely.
   - `appearances`: a single entry for this date/event/room.
 
 **Budget guard:** if a single week's new listings pull in an unusually
