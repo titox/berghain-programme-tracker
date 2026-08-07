@@ -277,6 +277,7 @@
   }
   .tag-toggle.active { border-color: var(--berghain); color: var(--berghain); }
   .tag-toggle.tag-hidden { display: none; }
+  .tag-toggle .flag-inline { margin-right: 4px; }
   .tag-more-btn {
     display: block; background: none; border: none; color: var(--muted); font-family: var(--font);
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: underline;
@@ -353,6 +354,10 @@
     <div class="field">
       <label class="field-label">Style</label>
       <div id="search-tags"></div>
+    </div>
+    <div class="field">
+      <label class="field-label">Nationality</label>
+      <div id="search-nationalities"></div>
     </div>
   </div>
 </aside>
@@ -506,7 +511,7 @@ document.addEventListener('click', (e) => {
 });
 
 const TAGS_VISIBLE_DEFAULT = 12;
-const searchState = { name: '', dateFrom: '', dateTo: '', perfMin: 0, perfMax: 0, tags: new Set() };
+const searchState = { name: '', dateFrom: '', dateTo: '', perfMin: 0, perfMax: 0, tags: new Set(), nationalities: new Set() };
 let searchOpen = false;
 let searchTagsRendered = false;
 
@@ -519,6 +524,17 @@ function updatePerfFill() {
   const fill = document.getElementById('search-perf-fill');
   fill.style.left = `${leftPct}%`;
   fill.style.width = `${Math.max(0, rightPct - leftPct)}%`;
+}
+
+function renderNationalityOptions() {
+  const byCode = new Map();
+  Object.values(DATA.djs).forEach(dj => {
+    if (dj.nationality) byCode.set(dj.nationality.code, dj.nationality.name);
+  });
+  const sorted = [...byCode.entries()].sort((a, b) => a[1].localeCompare(b[1]));
+  document.getElementById('search-nationalities').innerHTML = sorted.map(([code, name]) =>
+    `<button type="button" class="tag-toggle" data-nat="${esc(code)}"><span class="flag-inline">${flagEmoji(code)}</span>${esc(name)}</button>`
+  ).join('');
 }
 
 function renderTagOptions() {
@@ -556,6 +572,7 @@ function renderTagOptions() {
   searchState.perfMax = maxCount;
   document.getElementById('search-perf-max-val').textContent = String(maxCount);
   updatePerfFill();
+  renderNationalityOptions();
   searchTagsRendered = true;
 }
 
@@ -576,6 +593,7 @@ function djMatchesSearch(slug) {
     if (dj.stats.performanceCount > searchState.perfMax) return false;
   }
   if (searchState.tags.size > 0 && !(dj.tags || []).some(t => searchState.tags.has(t))) return false;
+  if (searchState.nationalities.size > 0 && (!dj.nationality || !searchState.nationalities.has(dj.nationality.code))) return false;
   return true;
 }
 
@@ -606,6 +624,8 @@ function resetSearchFilters() {
   document.getElementById('search-date-from').value = '';
   document.getElementById('search-date-to').value = '';
   document.querySelectorAll('#search-tags .tag-toggle.active').forEach(b => b.classList.remove('active'));
+  searchState.nationalities.clear();
+  document.querySelectorAll('#search-nationalities .tag-toggle.active').forEach(b => b.classList.remove('active'));
   const maxCount = Number(document.getElementById('search-perf-min').max) || 0;
   searchState.perfMin = 0;
   searchState.perfMax = maxCount;
@@ -681,6 +701,14 @@ document.getElementById('search-tags').addEventListener('click', (e) => {
   const tag = btn.dataset.tag;
   if (searchState.tags.has(tag)) { searchState.tags.delete(tag); btn.classList.remove('active'); }
   else { searchState.tags.add(tag); btn.classList.add('active'); }
+  renderSearchResults();
+});
+document.getElementById('search-nationalities').addEventListener('click', (e) => {
+  const btn = e.target.closest('.tag-toggle');
+  if (!btn) return;
+  const code = btn.dataset.nat;
+  if (searchState.nationalities.has(code)) { searchState.nationalities.delete(code); btn.classList.remove('active'); }
+  else { searchState.nationalities.add(code); btn.classList.add('active'); }
   renderSearchResults();
 });
 
