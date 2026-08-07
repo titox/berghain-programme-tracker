@@ -23,7 +23,11 @@
           "event": "REEF",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "BE",
+        "name": "Belgium"
+      }
     },
     "darwin": {
       "name": "Darwin",
@@ -45,7 +49,11 @@
           "event": "REEF",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "CA",
+        "name": "Canada"
+      }
     },
     "dbridge": {
       "name": "Dbridge",
@@ -69,7 +77,11 @@
           "event": "REEF",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "GB",
+        "name": "United Kingdom"
+      }
     },
     "esposito": {
       "name": "Esposito",
@@ -90,7 +102,11 @@
           "event": "REEF",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
     },
     "headhunter": {
       "name": "Headhunter",
@@ -151,7 +167,11 @@
           "event": "REEF",
           "room": "Panorama Bar"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "US",
+        "name": "United States"
+      }
     },
     "dubrunner": {
       "name": "Dubrunner",
@@ -175,7 +195,11 @@
           "event": "REEF",
           "room": "Panorama Bar"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "GB",
+        "name": "United Kingdom"
+      }
     },
     "jan-loup": {
       "name": "Jan Loup",
@@ -252,6 +276,10 @@
         "performanceCount": 11,
         "firstPlayed": "2018-08-25",
         "isResident": false
+      },
+      "nationality": {
+        "code": "BR",
+        "name": "Brazil"
       }
     },
     "andy-martin": {
@@ -281,6 +309,10 @@
         "performanceCount": 6,
         "firstPlayed": "2024-09-21",
         "isResident": false
+      },
+      "nationality": {
+        "code": "MX",
+        "name": "Mexico"
       }
     },
     "banu": {
@@ -310,6 +342,10 @@
         "performanceCount": 1,
         "firstPlayed": "2026-01-24",
         "isResident": false
+      },
+      "nationality": {
+        "code": "TR",
+        "name": "Turkey"
       }
     },
     "dj-maria": {
@@ -339,6 +375,10 @@
         "performanceCount": 11,
         "firstPlayed": "2023-02-25",
         "isResident": false
+      },
+      "nationality": {
+        "code": "JP",
+        "name": "Japan"
       }
     },
     "kaiser": {
@@ -368,6 +408,10 @@
         "performanceCount": 6,
         "firstPlayed": "2023-08-05",
         "isResident": false
+      },
+      "nationality": {
+        "code": "IT",
+        "name": "Italy"
       }
     },
     "kwartz": {
@@ -397,6 +441,10 @@
         "performanceCount": 13,
         "firstPlayed": "2023-05-06",
         "isResident": false
+      },
+      "nationality": {
+        "code": "ES",
+        "name": "Spain"
       }
     },
     "norman-nodge": {
@@ -425,6 +473,10 @@
         "performanceCount": 200,
         "firstPlayed": "2005-02-12",
         "isResident": true
+      },
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
       }
     },
     "andre-galluzzi": {
@@ -455,7 +507,11 @@
         "firstPlayed": "2004-12-18",
         "isResident": false
       },
-      "photo": "assets/dj-photos/andre-galluzzi.jpg"
+      "photo": "assets/dj-photos/andre-galluzzi.jpg",
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
     },
     "deepa": {
       "name": "Deepa",
@@ -507,6 +563,10 @@
         "performanceCount": 6,
         "firstPlayed": "2024-11-09",
         "isResident": false
+      },
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
       }
     },
     "hunee": {
@@ -536,6 +596,10 @@
         "performanceCount": 15,
         "firstPlayed": "2009-10-10",
         "isResident": false
+      },
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
       }
     },
     "maruwa": {
@@ -589,6 +653,10 @@
         "performanceCount": 3,
         "firstPlayed": "2025-02-01",
         "isResident": false
+      },
+      "nationality": {
+        "code": "SE",
+        "name": "Sweden"
       }
     },
     "nicola-cruz": {
@@ -618,6 +686,10 @@
         "performanceCount": 2,
         "firstPlayed": "2022-11-19",
         "isResident": false
+      },
+      "nationality": {
+        "code": "EC",
+        "name": "Ecuador"
       }
     },
     "zombies-in-miami": {
@@ -647,6 +719,10 @@
         "performanceCount": 11,
         "firstPlayed": "2016-06-04",
         "isResident": false
+      },
+      "nationality": {
+        "code": "MX",
+        "name": "Mexico"
       }
     },
     "rami-abi-rafi": {
@@ -668,7 +744,11 @@
           "event": "SÄULE",
           "room": "Säule"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "LB",
+        "name": "Lebanon"
+      }
     },
     "conceptual-live": {
       "name": "CONCEPTUAL",
@@ -772,7 +852,11 @@
           "event": "Kynant",
           "room": "Panorama Bar"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "GB",
+        "name": "United Kingdom"
+      }
     },
     "aurora-halal": {
       "name": "Aurora Halal",
@@ -814,7 +898,11 @@
           "event": "Kynant",
           "room": "Panorama Bar"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "FR",
+        "name": "France"
+      }
     },
     "altinbas-live": {
       "name": "Altinbas",
@@ -839,7 +927,11 @@
           "event": "Ostgut Ton Klubnacht",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "TR",
+        "name": "Turkey"
+      }
     },
     "fadi-mohem-live": {
       "name": "Fadi Mohem",
@@ -891,7 +983,11 @@
           "event": "Ostgut Ton Klubnacht",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "IT",
+        "name": "Italy"
+      }
     },
     "efdemin": {
       "name": "Efdemin",
@@ -918,7 +1014,11 @@
           "event": "Ostgut Ton Klubnacht",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
     },
     "gigi-fm": {
       "name": "GiGi FM",
@@ -1048,7 +1148,11 @@
           "event": "Ostgut Ton Klubnacht",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "GB",
+        "name": "United Kingdom"
+      }
     },
     "quelza": {
       "name": "Quelza",
@@ -1074,7 +1178,11 @@
           "event": "Ostgut Ton Klubnacht",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "FR",
+        "name": "France"
+      }
     },
     "cinthie": {
       "name": "Cinthie",
@@ -1127,7 +1235,11 @@
           "event": "Ostgut Ton Klubnacht",
           "room": "Panorama Bar"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
     },
     "fiedel": {
       "name": "Fiedel",
@@ -1235,9 +1347,13 @@
         {
           "date": "2026-08-08",
           "event": "Ostgut Ton Klubnacht",
-          "room": "Panorama Bar"
+          "room": "Garten"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "ZA",
+        "name": "South Africa"
+      }
     },
     "nd-baumecker": {
       "name": "nd_baumecker",
@@ -1317,9 +1433,13 @@
         {
           "date": "2026-08-08",
           "event": "Ostgut Ton Klubnacht",
-          "room": "Panorama Bar"
+          "room": "Garten"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "NL",
+        "name": "Netherlands"
+      }
     },
     "tama-sumo": {
       "name": "Tama Sumo",
@@ -1343,9 +1463,13 @@
         {
           "date": "2026-08-08",
           "event": "Ostgut Ton Klubnacht",
-          "room": "Panorama Bar"
+          "room": "Garten"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
     },
     "virginia": {
       "name": "Virginia",
@@ -1370,9 +1494,13 @@
         {
           "date": "2026-08-08",
           "event": "Ostgut Ton Klubnacht",
-          "room": "Panorama Bar"
+          "room": "Garten"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "BR",
+        "name": "Brazil"
+      }
     }
   },
   "days": [
@@ -1435,12 +1563,17 @@
             "fiedel",
             "gallegos",
             "gerd-janson",
-            "lakuti",
             "marcel-dettmann",
             "nd-baumecker",
-            "nick-hoppner",
-            "steffi",
+            "nick-hoppner"
+          ]
+        },
+        {
+          "room": "Garten",
+          "djSlugs": [
             "tama-sumo",
+            "lakuti",
+            "steffi",
             "virginia"
           ]
         }

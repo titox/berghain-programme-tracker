@@ -20,6 +20,22 @@ permanent gaps if a date isn't published yet when this runs; fetching
 everything shown makes each run self-healing for whatever the page
 currently displays, old or new.
 
+**Then, for every new club/DJ night found, fetch that event's own page
+directly** (`https://www.berghain.berlin/en/event/<id>/`, linked from the
+overview) rather than relying only on the overview page's summary. This
+is not optional: on 2026-08-08, an overview-page fetch reported only 2
+rooms (Berghain, Panorama Bar) for "Ostgut Ton Klubnacht," and only
+fetching the individual event page revealed a 3rd room, Garten, with 4
+more artists (as two b2b pairs) — the overview extraction had silently
+dropped an entire room. Berghain events have been seen with anywhere
+from 1 to 4 simultaneous rooms (Berghain, Panorama Bar, Säule, Garten so
+far — don't assume a max of 2, and don't assume any particular pair is
+"the normal one"). When fetching an individual event page, explicitly
+ask for "every room/floor mentioned and the complete lineup for each,
+do not omit any room" — and if the count still feels uncertain, fetch it
+again or fetch the room list a second, differently-worded way before
+proceeding, rather than trusting a single pass.
+
 If the fetch fails (unreachable, unexpected structure) after one retry:
 **stop here**. Do not write or commit anything. Send a failure
 notification describing what went wrong, so this can be checked and
@@ -37,10 +53,15 @@ is what keeps each week's batch limited to only what's actually new).
 For every new date:
 - `date` (`YYYY-MM-DD`), `weekday` (`MON`/`TUE`/.../`SUN`), `event` (the
   listing's title as shown on the programme page).
-- If it's a DJ/club night: `rooms`, one entry per room actually listed
-  (`{"room": "<name>", "djSlugs": [...]}`), using whatever room name the
-  page uses verbatim (don't force it into "Berghain"/"Panorama Bar" if
-  it's something else, e.g. "Säule").
+- If it's a DJ/club night: `rooms`, one entry per room **actually
+  listed on that event's own page** (see Step 1 — could be 1, 2, 3, or
+  more), using whatever room name the page uses verbatim (don't force it
+  into "Berghain"/"Panorama Bar" if it's something else, e.g. "Säule" or
+  "Garten"). Where the page lists a "b2b" (back-to-back) pairing, e.g.
+  "Steffi b2b Virginia," add **both** names as separate entries in that
+  room's `djSlugs` (`["steffi", "virginia"]`) — a b2b pairing is two
+  people sharing a set, not one combined act; don't merge them into a
+  single slug/name, and don't drop one.
 - If it's not a DJ/club night (concert, closed day, etc.): `rooms: []`
   and nothing further for that date.
 
