@@ -71,6 +71,45 @@ class ValidateLineupTests(unittest.TestCase):
         errors = check(data)
         self.assertTrue(any("stats missing" in e for e in errors))
 
+    def test_nationality_valid_passes(self):
+        data = minimal_data()
+        data["djs"]["test-dj"]["nationality"] = {"code": "LB", "name": "Lebanon"}
+        self.assertEqual(check(data), [])
+
+    def test_nationality_missing_name_fails(self):
+        data = minimal_data()
+        data["djs"]["test-dj"]["nationality"] = {"code": "LB"}
+        errors = check(data)
+        self.assertTrue(any("nationality missing 'name'" in e for e in errors))
+
+    def test_nationality_bad_code_fails(self):
+        data = minimal_data()
+        data["djs"]["test-dj"]["nationality"] = {"code": "LBN", "name": "Lebanon"}
+        errors = check(data)
+        self.assertTrue(any("not a 2-letter ISO code" in e for e in errors))
+
+    def test_days_out_of_order_fails(self):
+        data = minimal_data()
+        data["djs"]["second-dj"] = {
+            "name": "Second DJ",
+            "tags": ["Techno"],
+            "blurb": "b",
+            "bio": "bio",
+            "links": {},
+            "appearances": [{"date": "2026-08-14", "event": "Klubnacht", "room": "Berghain"}],
+        }
+        data["days"].append({
+            "date": "2026-08-14", "weekday": "FRI", "event": "Klubnacht",
+            "rooms": [{"room": "Berghain", "djSlugs": ["second-dj"]}],
+        })
+        errors = check(data)
+        self.assertTrue(
+            any(
+                "not sorted ascending by date (found '2026-08-14' after '2026-08-21')" in e
+                for e in errors
+            )
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

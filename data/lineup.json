@@ -12,7 +12,10 @@
       "links": {
         "soundcloud": "https://soundcloud.com/alixperez",
         "instagram": "https://www.instagram.com/alixperez1985/",
-        "youtube": "https://www.youtube.com/watch?v=QJ0bAw80zFU"
+        "youtube": "https://www.youtube.com/watch?v=QJ0bAw80zFU",
+        "bandcamp": "https://alixperez.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/alix-perez/203209842",
+        "spotify": "https://open.spotify.com/artist/4e6pQ61gYReORJoXcrQH1Z"
       },
       "appearances": [
         {
@@ -20,7 +23,11 @@
           "event": "REEF",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "BE",
+        "name": "Belgium"
+      }
     },
     "darwin": {
       "name": "Darwin",
@@ -42,7 +49,11 @@
           "event": "REEF",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "CA",
+        "name": "Canada"
+      }
     },
     "dbridge": {
       "name": "Dbridge",
@@ -55,7 +66,10 @@
       "bio": "dBridge (Darren White) is an English drum & bass producer active since the genre's early-1990s inception, first as one half of Sewer Monsters and then Future Forces Inc., before joining the D&B supergroup Bad Company UK in the late '90s. He left Bad Company in 2003 to found Exit Records, an outlet for a more experimental, atmospheric sound. In 2009 he and Instra:mental launched the influential Autonomic podcast and club night, showcased on FabricLive.50 in 2010.",
       "links": {
         "soundcloud": "https://soundcloud.com/dbridge_exitrecords",
-        "youtube": "https://www.youtube.com/watch?v=mVPeJfk58JI"
+        "youtube": "https://www.youtube.com/watch?v=mVPeJfk58JI",
+        "bandcamp": "https://dbridge.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/dbridge/152760346",
+        "spotify": "https://open.spotify.com/artist/4G1BTcGLvvsItegHSvBH0y"
       },
       "appearances": [
         {
@@ -63,7 +77,11 @@
           "event": "REEF",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "GB",
+        "name": "United Kingdom"
+      }
     },
     "esposito": {
       "name": "Esposito",
@@ -84,7 +102,11 @@
           "event": "REEF",
           "room": "Berghain"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
     },
     "headhunter": {
       "name": "Headhunter",
@@ -95,7 +117,10 @@
       "blurb": "Bristol dubstep originator revisiting the murky, jungle-inflected sound that built his name.",
       "bio": "Headhunter is an alias of Bristol producer Antony 'Tony' Williams, who emerged in the mid-2000s with releases on Tempa including the Initiate EP (2007) and the album Nomad (2008), blending dubstep with jungle, techno and dubtech textures. He later moved into juke- and footwork-inflected sounds under the alias Addison Groove, but continues to perform and release as Headhunter, revisiting the darker, sub-heavy productions that built his reputation.",
       "links": {
-        "youtube": "https://www.youtube.com/watch?v=WjaT_-vgQ9A"
+        "youtube": "https://www.youtube.com/watch?v=WjaT_-vgQ9A",
+        "bandcamp": "https://dubstepheadhunter.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/addison-groove/427349322",
+        "spotify": "https://open.spotify.com/artist/6LG1BzyImz45pwMF6ft7Yr"
       },
       "appearances": [
         {
@@ -131,7 +156,10 @@
       "bio": "Carré (Carré Orenstein) is a US-born, London-based producer and DJ, and co-founder of Fast At Work, the underground party series and label that grew from Los Angeles into an internationally touring imprint. Her sound blends dubstep with percussive, higher-tempo leftfield techno, with releases including 2024's Soft Fascination and Air Sign on Darwin's SPE:C label, plus 2025 releases on the storied Tempa and on EMA's Woozy imprint. Named one of Mixmag's Top Artists to Watch in 2026, she has played Panorama Bar, FOLD, The White Hotel and Outlook Festival.",
       "links": {
         "soundcloud": "https://soundcloud.com/carreo",
-        "instagram": "https://www.instagram.com/carre__carre"
+        "instagram": "https://www.instagram.com/carre__carre",
+        "bandcamp": "https://carre-carre.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/carre/1695916096",
+        "spotify": "https://open.spotify.com/artist/4OvPiX5d1CRMoTuqvoq202"
       },
       "appearances": [
         {
@@ -139,7 +167,11 @@
           "event": "REEF",
           "room": "Panorama Bar"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "US",
+        "name": "United States"
+      }
     },
     "dubrunner": {
       "name": "Dubrunner",
@@ -152,7 +184,10 @@
       "bio": "Dubrunner (Charlie) is a UK-born, Berlin-based producer and DJ who runs the Menace label, an outlet for his take on dubwise soundsystem culture spanning steppers, dub and digi productions as a springboard into breakbeat hardcore, jungle and techno. He has shared bills with Iration Steppas, Goldie, Call Super and Addison Groove, with recent Menace releases including the Fallen Tree (2024) and Blackheart (2025) EPs. He describes his own sound as 'Industrial Reggae.'",
       "links": {
         "soundcloud": "https://soundcloud.com/dubrunneruk",
-        "instagram": "https://www.instagram.com/dubrunner___"
+        "instagram": "https://www.instagram.com/dubrunner___",
+        "bandcamp": "https://dubrunner.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/dubrunner/1487702116",
+        "spotify": "https://open.spotify.com/artist/0rIFRZ3N5Hcwdppkt0wo9w"
       },
       "appearances": [
         {
@@ -160,7 +195,11 @@
           "event": "REEF",
           "room": "Panorama Bar"
         }
-      ]
+      ],
+      "nationality": {
+        "code": "GB",
+        "name": "United Kingdom"
+      }
     },
     "jan-loup": {
       "name": "Jan Loup",
@@ -173,7 +212,10 @@
       "bio": "Jan Loup is a Toulouse-based producer, DJ and sound technician active since 2018, working from a secluded hut studio to build sets that fuse modern dubstep, deep drum & bass, percussive halftime and tribal textures. An integral figure in Toulouse's alternative nightlife, she co-runs Le Comité Des Fêtes, a sound-system-culture collective, and is part of the ambient collective Aïra. She released her first EPs on Nerve Collect and Jupiter4 in 2024, followed by a collaborative EP with Beatrice M. on Priori's NAFF label and a release on the storied Tempa in 2025.",
       "links": {
         "soundcloud": "https://soundcloud.com/janloup",
-        "instagram": "https://www.instagram.com/fauxbits999"
+        "instagram": "https://www.instagram.com/fauxbits999",
+        "bandcamp": "https://janloup.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/jan-loup/1460834701",
+        "spotify": "https://open.spotify.com/artist/44MvjyW33ZyJ7SictqJK2G"
       },
       "appearances": [
         {
@@ -194,7 +236,10 @@
       "bio": "Le Motel (Fabien Leclercq) is a Brussels-based producer, DJ and film composer whose work blends field-recorded, organic textures with footwork, dub, hip-hop and techno; he runs the Maloca label and released the acclaimed 2015 album OKA. Magugu is a Nigerian-born, Cardiff-based vocalist and 'pidgin rap' experimentalist fusing dancehall, grime, dub, hip-hop and drum & bass with Nigerian pidgin English, earning support from Gilles Peterson and Skrillex. The pair have collaborated since 2021, releasing the Kindness Weakness (2023) and Bitter Better (2025) EPs on Maloca, and appear at REEF as a dedicated back-to-back pairing.",
       "links": {
         "soundcloud": "https://soundcloud.com/malocarecords/sets/magugu-le-motel-bitter-better",
-        "youtube": "https://www.youtube.com/watch?v=eRXIGxOD-jc"
+        "youtube": "https://www.youtube.com/watch?v=eRXIGxOD-jc",
+        "bandcamp": "https://magugu1.bandcamp.com/album/bitter-better",
+        "applemusic": "https://music.apple.com/gb/album/bitter-better/1823013031",
+        "spotify": "https://open.spotify.com/album/08bubTmlwYnVkMW7m6jGUB"
       },
       "appearances": [
         {
@@ -215,7 +260,10 @@
       "bio": "Amanda Mussi is a Brazilian/Paraguayan DJ, producer and label/agency head based in Berlin, known for deep, driving techno sets that blend Detroit's mechanical influences with UK soundscapes, tribal percussion and layered vocals. Before relocating to Europe she was a fixture of São Paulo's queer underground scene, running the monthly party Dûsk for five years and holding residencies at Mamba Negra, Dando and Kode. She has become one of the first female Brazilian DJs to play multiple times on Berghain's main floor, recently earning her first closing set there, and runs the South American booking agency Alt alongside the Macro Hits label.",
       "links": {
         "soundcloud": "https://soundcloud.com/ohmussi",
-        "instagram": "https://www.instagram.com/ohmussi/"
+        "instagram": "https://www.instagram.com/ohmussi/",
+        "bandcamp": "https://amandamussi.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/amanda-mussi/1434450962",
+        "spotify": "https://open.spotify.com/artist/6yoR3GxDnUclI3jI8exbvQ"
       },
       "appearances": [
         {
@@ -228,6 +276,10 @@
         "performanceCount": 11,
         "firstPlayed": "2018-08-25",
         "isResident": false
+      },
+      "nationality": {
+        "code": "BR",
+        "name": "Brazil"
       }
     },
     "andy-martin": {
@@ -241,7 +293,10 @@
       "bio": "Andy Martin is a Mexico City-based Mexican-Jamaican DJ and producer whose work merges sci-fi techno with Latin American and Caribbean sounds, casting rich, mysterious atmospheres over deep sonic structures. His 2022 debut album Antiguos Astronautas, released on his own label Diaspora Echoes, imagines an advanced pre-Columbian civilization and earned support from DVS1, Nastia, Ben UFO and Richie Hawtin, with airplay in clubs including Berghain, Tresor and Fabric. He has also released ambient work as The Language of Sound and performed at MUTEK festivals in Mexico and Japan; his Klubnacht booking marked his Berghain debut.",
       "links": {
         "soundcloud": "https://soundcloud.com/andy-martin",
-        "instagram": "https://www.instagram.com/4ndym4rtin/"
+        "instagram": "https://www.instagram.com/4ndym4rtin/",
+        "bandcamp": "https://diasporaechoes.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/andy-martin/485286197",
+        "spotify": "https://open.spotify.com/artist/0Jz8IMWrZOWnILYFJmdyE2"
       },
       "appearances": [
         {
@@ -254,6 +309,10 @@
         "performanceCount": 6,
         "firstPlayed": "2024-09-21",
         "isResident": false
+      },
+      "nationality": {
+        "code": "MX",
+        "name": "Mexico"
       }
     },
     "banu": {
@@ -267,7 +326,10 @@
       "bio": "Banu (Banu Çiçek Tülü) is a Berlin-based DJ, producer, artist and researcher born in southeast Anatolia, whose work straddles trippy techno, experimental electronics and activism. Her 2022 debut album TransSoundScapes, released on Intergalactic Research Institute for Sound, is built from ARP 2600 synth textures, field recordings and voices, conceived as an act of solidarity between her as a migrant woman and the trans community around her. She played her first Berghain Klubnacht set in January 2026, having previously appeared at the club's 20th-anniversary Elektroakustischer Salon in December 2024.",
       "links": {
         "soundcloud": "https://soundcloud.com/banusound",
-        "instagram": "https://www.instagram.com/banusoundd/"
+        "instagram": "https://www.instagram.com/banusoundd/",
+        "bandcamp": "https://intergalacticresearchinstituteforsound.bandcamp.com/album/transsoundscapes",
+        "applemusic": "https://music.apple.com/us/artist/banu/275718037",
+        "spotify": "https://open.spotify.com/artist/2WXqHLTFdbRHrAsDSBvrHJ"
       },
       "appearances": [
         {
@@ -280,6 +342,10 @@
         "performanceCount": 1,
         "firstPlayed": "2026-01-24",
         "isResident": false
+      },
+      "nationality": {
+        "code": "TR",
+        "name": "Turkey"
       }
     },
     "dj-maria": {
@@ -293,7 +359,10 @@
       "bio": "DJ MARIA. is a Tokyo-based techno DJ and producer, originally from Osaka, who discovered dance music through psytrance at 13 and began DJing in 2014. Her sets fuse acid, trance and techno into immersive, psychedelic-leaning journeys, and she has played clubs including Bassiani, FOLD, Acquario Masada and the former De School alongside her Berghain appearances. She co-founded the Japanese forest festivals Moment and Transcendance, and released the Acid Sunrise EP on Beyond the Galaxy.",
       "links": {
         "soundcloud": "https://soundcloud.com/djmaria-jp",
-        "instagram": "https://www.instagram.com/mariasatelles/"
+        "instagram": "https://www.instagram.com/mariasatelles/",
+        "bandcamp": "https://katharsis.bandcamp.com/album/silver-lining-ep-katharsis-006",
+        "applemusic": "https://music.apple.com/us/artist/dj-maria/160953956",
+        "spotify": "https://open.spotify.com/artist/6FQS0bHtvPig6kqIhhzAZO"
       },
       "appearances": [
         {
@@ -306,6 +375,10 @@
         "performanceCount": 11,
         "firstPlayed": "2023-02-25",
         "isResident": false
+      },
+      "nationality": {
+        "code": "JP",
+        "name": "Japan"
       }
     },
     "kaiser": {
@@ -319,7 +392,10 @@
       "bio": "Kaiser (Gianluca Caiati) is an Italian DJ and producer, born and raised in southern Italy, who based himself in Berlin from 2019 to 2025 and now splits time between Italy and Portugal while still calling Berlin home. In 2017 he founded the label K S R (Kaiser Sound Records), a platform for emerging techno artists, and in 2021 launched the duo project Force Reaction with fellow producer Kwartz. He made his Berghain debut on 5 August 2023, opening a Klubnacht with a four-hour set moving from ambient electronica through minimal techno into groovy breakbeats.",
       "links": {
         "soundcloud": "https://soundcloud.com/kaiserksr_it",
-        "instagram": "https://www.instagram.com/kaiser_ksr/"
+        "instagram": "https://www.instagram.com/kaiser_ksr/",
+        "bandcamp": "https://kaiserksr.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/kaiser-k-s-r/1576846126",
+        "spotify": "https://open.spotify.com/artist/5U3XDNsNoGPXsiXQzPg5LR"
       },
       "appearances": [
         {
@@ -332,6 +408,10 @@
         "performanceCount": 6,
         "firstPlayed": "2023-08-05",
         "isResident": false
+      },
+      "nationality": {
+        "code": "IT",
+        "name": "Italy"
       }
     },
     "kwartz": {
@@ -345,7 +425,10 @@
       "bio": "Kwartz (Mario Campos) is a Madrid-born, Berlin-based techno DJ and producer who joined Oscar Mulero's PoleGroup in 2013, becoming a regular presence on the label's roster. He founded his own label, Order&Devotion, in 2016, releasing music that moves between dark atmospheres and deep, visceral sound, with further releases appearing on SK_Eleven, Mord Records, Semantica and Warm Up Recordings. In 2021 he launched the duo project Force Reaction with Kaiser, oriented toward a more classic techno sound.",
       "links": {
         "soundcloud": "https://soundcloud.com/kwartz",
-        "instagram": "https://www.instagram.com/kwartz_/"
+        "instagram": "https://www.instagram.com/kwartz_/",
+        "bandcamp": "https://kwartz.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/kwartz/445260517",
+        "spotify": "https://open.spotify.com/artist/6jgHZXMwN5vXQxNs72dQpA"
       },
       "appearances": [
         {
@@ -358,6 +441,10 @@
         "performanceCount": 13,
         "firstPlayed": "2023-05-06",
         "isResident": false
+      },
+      "nationality": {
+        "code": "ES",
+        "name": "Spain"
       }
     },
     "norman-nodge": {
@@ -371,7 +458,9 @@
       "bio": "Norman Nodge is a Leipzig-born, Brandenburg-raised DJ and lawyer who caught the techno bug after the fall of the Wall, promoting parties from 1994 onward where he crossed paths with, and became a mentor to, Marcel Fengler and Marcel Dettmann. After stepping back from nightlife in the late '90s to pursue law and family life, he was pitched to Berghain's management by Dettmann and became a resident DJ instantaneously in 2005, since then playing roughly once a month and specializing in the art of warming up a night. His style fuses classic Detroit techno (Jeff Mills, Robert Hood, 430 West) and Chicago house (Relief, Dance Mania) with new material, never shying from unusual sounds away from current trends.",
       "links": {
         "soundcloud": "https://soundcloud.com/norman-nodge",
-        "instagram": "https://www.instagram.com/norman_nodge/"
+        "instagram": "https://www.instagram.com/norman_nodge/",
+        "applemusic": "https://music.apple.com/us/artist/norman-nodge/309702821",
+        "spotify": "https://open.spotify.com/artist/3XsZjgYO83dSNppZzXlzFB"
       },
       "appearances": [
         {
@@ -384,6 +473,10 @@
         "performanceCount": 200,
         "firstPlayed": "2005-02-12",
         "isResident": true
+      },
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
       }
     },
     "andre-galluzzi": {
@@ -397,7 +490,10 @@
       "bio": "André Galluzzi (b. 1973, Frankfurt) began DJing at 14, co-founded the TAKSI label in 1995 and became a resident at Tresor the following year before joining Ostgut — the club that became Berghain — as one of its founding residents alongside Marcel Dettmann and Cora S. He has played Panorama Bar for two decades, prized for long, tension-building sets that rarely run under six hours, and produces widely across labels including Ostgut Ton, Cocoon, Cadenza and his own ARAS imprint (co-founded with Dana Ruh around 2010/2011). His debut solo album, Alcatraz, arrived in 2015.",
       "links": {
         "soundcloud": "https://soundcloud.com/andre-galluzzi",
-        "instagram": "https://www.instagram.com/andregalluzzi_official/"
+        "instagram": "https://www.instagram.com/andregalluzzi_official/",
+        "bandcamp": "https://andregalluzzi.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/andr%C3%A9-galluzzi/276537999",
+        "spotify": "https://open.spotify.com/artist/1V9PJvMVxLIxhCdHCn8SC6"
       },
       "appearances": [
         {
@@ -411,7 +507,11 @@
         "firstPlayed": "2004-12-18",
         "isResident": false
       },
-      "photo": "assets/dj-photos/andre-galluzzi.jpg"
+      "photo": "assets/dj-photos/andre-galluzzi.jpg",
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
     },
     "deepa": {
       "name": "Deepa",
@@ -463,6 +563,10 @@
         "performanceCount": 6,
         "firstPlayed": "2024-11-09",
         "isResident": false
+      },
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
       }
     },
     "hunee": {
@@ -476,7 +580,10 @@
       "bio": "Hunee grew up in Bochum to South Korean parents and moved to Berlin straight after school to dig for records and DJ across the city's clubs, initially producing hip-hop before shifting fully into music in his mid-twenties. He relocated to Amsterdam in 2014 and built close ties with Rush Hour co-founder Antal, releasing his acclaimed debut album Hunch Music via Rush Hour and further records on W.T. Records, Future Times, Internasjonal and Ostgut Ton. He also runs his own label and platform, Lifetones, and is known for expansive, unbounded sets spanning house, disco and beyond.",
       "links": {
         "soundcloud": "https://soundcloud.com/hunee",
-        "instagram": "https://www.instagram.com/hunchmusic/"
+        "instagram": "https://www.instagram.com/hunchmusic/",
+        "bandcamp": "https://hunee.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/hunee/330283087",
+        "spotify": "https://open.spotify.com/artist/6uElH4moADg7AGB3DCGOwy"
       },
       "appearances": [
         {
@@ -489,6 +596,10 @@
         "performanceCount": 15,
         "firstPlayed": "2009-10-10",
         "isResident": false
+      },
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
       }
     },
     "maruwa": {
@@ -502,7 +613,10 @@
       "bio": "Maruwa (Maria Believskaia) grew up in St. Petersburg, trained in classical piano and played keys in a rock band before her brother — a home-studio producer on the local underground circuit — introduced her to electronic music. She began as a producer, moving from big-room EDM through a jazzy hip-hop phase before a friend's introduction to lo-fi house led Mall Grab to sign her to his label Steel City Dance Discs, launching the Maruwa project; she has since released on Steel City Dance Discs and X-Kalay. Now based in Frankfurt, her sets fuse nostalgic '90s/2000s textures with modern trance, progressive house and techno.",
       "links": {
         "soundcloud": "https://soundcloud.com/maruwa1",
-        "instagram": "https://www.instagram.com/maruwa.dj/"
+        "instagram": "https://www.instagram.com/maruwa.dj/",
+        "bandcamp": "https://maruwa.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/maruwa/1456768143",
+        "spotify": "https://open.spotify.com/artist/6jvVhsNfiC1BXMtZHKpgHF"
       },
       "appearances": [
         {
@@ -523,7 +637,10 @@
       "bio": "Mattias El Mansouri was born in the small Swedish town of Skene and is of Moroccan/Chilean descent; he moved to Stockholm, where he co-founded and organized the Ritmo Liminal club concept before shifting from record collecting into producing and DJing. He holds a degree in Theoretical Philosophy and is a resident at Stockholm's Under Bron/Trädgården, one of Sweden's key electronic-music incubators. His productions move between deep, driving rhythms and rich ambient textures, with releases including Tja Hej Salam on Aniara Recordings, a contribution to Nous'klaer Audio's Paraels III compilation, and the Sense Data EP on Phonica Records (March 2026).",
       "links": {
         "soundcloud": "https://soundcloud.com/mattiaselmansouri",
-        "instagram": "https://www.instagram.com/mattiaselmansouri/"
+        "instagram": "https://www.instagram.com/mattiaselmansouri/",
+        "bandcamp": "https://melmansouri.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/mattias-el-mansouri/1703214232",
+        "spotify": "https://open.spotify.com/artist/6pNtdoHIGx5LR9iNY2XRxx"
       },
       "appearances": [
         {
@@ -536,6 +653,10 @@
         "performanceCount": 3,
         "firstPlayed": "2025-02-01",
         "isResident": false
+      },
+      "nationality": {
+        "code": "SE",
+        "name": "Sweden"
       }
     },
     "nicola-cruz": {
@@ -549,7 +670,10 @@
       "bio": "Nicola Cruz was born to Ecuadorian parents in Limoges, France, and moved to Quito at age three, where he trained on percussion and grew fascinated with both electronic and folkloric music from around age 12. Nicolas Jaar heard an early tape and brought him on a US tour in 2012, launching his career; his 2013 Noise Within Us EP was followed by the breakthrough single 'Colibria' (2015, featuring Huaira Ukay) and the acclaimed debut album Prender el Alma on ZZK Records. His latest full-length, Kinesia, arrived in October 2024, continuing his signature blend of Andean cumbia rhythms, traditional Colombian vocal textures and minimalist electronic production.",
       "links": {
         "soundcloud": "https://soundcloud.com/nicolacruz",
-        "instagram": "https://www.instagram.com/nicolacruzz/"
+        "instagram": "https://www.instagram.com/nicolacruzz/",
+        "bandcamp": "https://nicolacruz.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/nicola-cruz/544158384",
+        "spotify": "https://open.spotify.com/artist/0OltT51j3hIkgaDJqqPzDn"
       },
       "appearances": [
         {
@@ -562,6 +686,10 @@
         "performanceCount": 2,
         "firstPlayed": "2022-11-19",
         "isResident": false
+      },
+      "nationality": {
+        "code": "EC",
+        "name": "Ecuador"
       }
     },
     "zombies-in-miami": {
@@ -575,7 +703,10 @@
       "bio": "Zombies In Miami is the project of Mexican duo Cani and Jenouise, partners in music and life for over 17 years, working entirely with hardware — synths, drum machines and effects, no laptop, no sync — to respond live to the room rather than follow a fixed plan. Their rhythmic fusion of house, techno and disco draws on tribal percussion, analogue textures and deep melodic layers, with releases on Running Back, Permanent Vacation, Correspondant, Cómeme and Kompakt, including their cinematic debut album 2712 on Permanent Vacation. They also run Creatures of the Night, their own label and event series championing like-minded Latin American artists.",
       "links": {
         "soundcloud": "https://soundcloud.com/zombiesinmiami",
-        "instagram": "https://www.instagram.com/zombiesinmiami/"
+        "instagram": "https://www.instagram.com/zombiesinmiami/",
+        "bandcamp": "https://zombiesinmiami.bandcamp.com/",
+        "applemusic": "https://music.apple.com/us/artist/zombies-in-miami/519720189",
+        "spotify": "https://open.spotify.com/artist/42ZWiibQTSxTJSBV7oziPy"
       },
       "appearances": [
         {
@@ -588,10 +719,866 @@
         "performanceCount": 11,
         "firstPlayed": "2016-06-04",
         "isResident": false
+      },
+      "nationality": {
+        "code": "MX",
+        "name": "Mexico"
+      }
+    },
+    "rami-abi-rafi": {
+      "name": "Rami Abi Rafi",
+      "tags": [
+        "Experimental",
+        "Cold Wave",
+        "Electronic"
+      ],
+      "blurb": "Sound artist splicing Lebanese folk memory with cold wave and experimental electronics.",
+      "bio": "Rami Abi Rafi is a Lebanese DJ, sound artist, and photographer, born in London and now based between Berlin and Beirut. He hosts radio programs on Radio Al-Hara, NOODS Radio, and Cashmere Radio that blend experimental and traditional Lebanese music, electronic music, cold wave, and folk documentation. His work aims to empower imagination, retelling cultural stories through sound.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/ramiabirafi",
+        "instagram": "https://www.instagram.com/ramiabirafi"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-06",
+          "event": "SÄULE",
+          "room": "Säule"
+        }
+      ],
+      "nationality": {
+        "code": "LB",
+        "name": "Lebanon"
+      }
+    },
+    "conceptual-live": {
+      "name": "CONCEPTUAL",
+      "tags": [
+        "Techno",
+        "Live Act",
+        "Experimental"
+      ],
+      "blurb": "Techno reframed as performance art, built from hardware live sets and visual-artist collaboration.",
+      "bio": "CONCEPTUAL is a Berlin-based techno live act born from a devotion to techno and to visual and performance art. Performances are frequently built around collaborations with visual artists, staged as immersive audiovisual experiences rather than straightforward DJ sets. In 2021 the artist founded DUNA, a Berlin recording project and label showcasing an evolving roster of experimental techno producers.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/conceptual2020"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-06",
+          "event": "SÄULE",
+          "room": "Säule"
+        }
+      ]
+    },
+    "ayesha": {
+      "name": "Ayesha",
+      "tags": [
+        "Percussive Techno",
+        "Breaks",
+        "Bass"
+      ],
+      "blurb": "Brooklyn diaspora sounds channeled into tactile, percussive club tracks.",
+      "bio": "Ayesha is a Brooklyn-based DJ and producer who channels the sounds of her diaspora into tactile club experiences, blending American percussive techno with UK soundsystem culture, breaks, and bass. She released the Potential Energy EP on Scuffed Recordings and is a resident at NYC's Nowadays.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/aye5ha",
+        "bandcamp": "https://aye5ha.bandcamp.com",
+        "spotify": "https://open.spotify.com/artist/2nmIga6kAJM6a18mZqsE1U",
+        "instagram": "https://www.instagram.com/aye5ha/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-06",
+          "event": "SÄULE",
+          "room": "Säule"
+        }
+      ]
+    },
+    "tikiman": {
+      "name": "Tikiman",
+      "tags": [
+        "Dub",
+        "Reggae",
+        "Dub Techno"
+      ],
+      "blurb": "The reggae singjay voice that defined the Rhythm & Sound dub-techno sound.",
+      "bio": "Tikiman is the alias of Paul St. Hilaire, a reggae vocalist and longtime collaborator of Rhythm & Sound (Mark Ernestus and Moritz von Oswald of Basic Channel). From the mid-1990s onward he became the defining voice on a string of dub-techno singles for Rhythm & Sound and Burial Mix, fusing traditional Jamaican vocal style with minimal, cavernous techno production. In 2023 he released Tikiman Vol. 1, his first solo album in 17 years, on Richard Akingbehin's Kynant Records.",
+      "links": {},
+      "appearances": [
+        {
+          "date": "2026-08-07",
+          "event": "Kynant",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "parallel-9": {
+      "name": "Parallel 9",
+      "tags": [
+        "Dub Techno",
+        "Deep Techno",
+        "House"
+      ],
+      "blurb": "Steve Rachmad's rare, hypnotic dub-techno alias, decades deep and still evolving.",
+      "bio": "Parallel 9 is one of several aliases of Amsterdam techno pioneer Steve Rachmad (also known as Sterac), reserved for his deepest, most hypnotic and dub-infused productions. Active since the mid-1990s, the project surfaces only at selected moments, marking 2026 as Rachmad's 45th year in music with appearances including Panorama Bar in Berlin. A Parallel 9 set is built as a slow, atmospheric journey emphasizing depth and subtlety over dancefloor immediacy.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/steverachmad",
+        "instagram": "https://www.instagram.com/steve_rachmad_sterac/",
+        "spotify": "https://open.spotify.com/artist/5VWshOLeHwzhDjFl3HrbMG"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-07",
+          "event": "Kynant",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "richard-akingbehin": {
+      "name": "Richard Akingbehin",
+      "tags": [
+        "Dub Techno",
+        "House",
+        "Techno"
+      ],
+      "blurb": "Kynant Records founder threading dub weight through house and techno.",
+      "bio": "Richard Akingbehin is a British-Nigerian DJ and curator based in Berlin whose sets draw on Jamaican and UK soundsystem culture, using the heavy basslines and spatial effects of dub to guide a blend of house and techno. He founded Kynant Records in 2015 and co-founded Berlin's Refuge Worldwide radio station in 2021. He has a close collaborative history with dub vocalist Tikiman, whose 2023 comeback album he released on Kynant.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/richard-akingbehin",
+        "instagram": "https://instagram.com/richardakingbehin"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-07",
+          "event": "Kynant",
+          "room": "Panorama Bar"
+        }
+      ],
+      "nationality": {
+        "code": "GB",
+        "name": "United Kingdom"
+      }
+    },
+    "aurora-halal": {
+      "name": "Aurora Halal",
+      "tags": [
+        "Techno",
+        "Acid",
+        "Experimental"
+      ],
+      "blurb": "Shadowy, psychedelic hardware techno with metallic dancefloor intensity.",
+      "bio": "Aurora Halal is a New York-based producer and DJ who has been a driving force in the NYC underground since 2010, founding both the Sustain-Release festival and Brooklyn's Mutual Dreaming party series. Her hardware-driven live and DJ sets are shadowy and psychedelic, marked by a hazy sensuality and metallic dancefloor intensity. She has held residencies at Nowadays in New York and played regularly at Berghain in Berlin.",
+      "links": {
+        "instagram": "https://www.instagram.com/AuroraHalal/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-07",
+          "event": "Kynant",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "laura-bcr": {
+      "name": "Laura BCR",
+      "tags": [
+        "Dub Techno",
+        "Ambient Techno",
+        "Deep House"
+      ],
+      "blurb": "Deep, dubby, vinyl-only techno from the founder of On Board Music.",
+      "bio": "Laura BCR, real name Laura Le Marchand, is a French DJ-producer and founder of the On Board Music label and agency. She took her alias from Bass Cadet Records, a Berlin record store she co-founded in 2013, and is known for transportive, atmospheric DJ sets that move between deep, dubby techno and ambient textures. Originally from southern France, she played bass in a band before moving into DJing and party organizing between Paris and Berlin.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/laurabcr",
+        "bandcamp": "https://laurabcr01.bandcamp.com",
+        "instagram": "https://www.instagram.com/laura___bcr/"
+      },
+      "appearances": [
+        {
+          "date": "2026-08-07",
+          "event": "Kynant",
+          "room": "Panorama Bar"
+        }
+      ],
+      "nationality": {
+        "code": "FR",
+        "name": "France"
+      }
+    },
+    "altinbas-live": {
+      "name": "Altinbas",
+      "tags": [
+        "Techno",
+        "Electronic"
+      ],
+      "blurb": "Turkish/Belgian producer and Fuse resident known for sculpted sound design and emotionally-charged, journey-driven techno.",
+      "bio": "Ahmet Altinbas is a Turkish/Belgian producer, Fuse resident, and co-curator of the Fuse Imprint label based in Brussels. His productions favor researched, sculpted sound design over pure impact, released on labels including Token Records, SK11, and Non Series, as well as his own imprint Observer Station. As a DJ he builds sets as narrative journeys, and he has contributed podcasts to Hate, Slam Radio, Reclaim Your City, and Monument.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/altinbas",
+        "applemusic": "https://music.apple.com/us/artist/altinbas/1038438994"
+      },
+      "stats": {
+        "performanceCount": 11,
+        "firstPlayed": "2024-03-23",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "nationality": {
+        "code": "TR",
+        "name": "Turkey"
+      }
+    },
+    "fadi-mohem-live": {
+      "name": "Fadi Mohem",
+      "tags": [
+        "Techno"
+      ],
+      "blurb": "Berlin-based Berghain resident driving hypnotic, peak-time techno rooted in a drum & bass upbringing.",
+      "bio": "Fadi Mohem is a Berlin-based electronic music producer and current Berghain resident DJ. He discovered dance music through drum and bass as a teenager before developing a broad stylistic range with no strict genre boundaries. His debut Reckless EP launched Werk, a label offshoot of the Berlin event series of the same name, and his releases have since appeared on techno imprints including Klockworks.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/fadimohem",
+        "instagram": "https://www.instagram.com/fadi.mohem/",
+        "applemusic": "https://music.apple.com/us/artist/fadi-mohem/1294383534"
+      },
+      "stats": {
+        "performanceCount": 39,
+        "firstPlayed": "2019-12-28",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "claudio-prc": {
+      "name": "Claudio PRC",
+      "tags": [
+        "Techno",
+        "House"
+      ],
+      "blurb": "Sardinian producer crafting deep, hypnotic techno and house rooted in Detroit and Birmingham influences.",
+      "bio": "Claudio PRC grew up near Oristano in Sardinia, Italy, discovering music through his father's Northern Soul record collection. He began exploring Detroit techno and artists like Plastikman and Donato Dozzy at 18, DJing across Sardinia from 2004 before turning to production in 2007. His deep, hypnotic techno and house releases have appeared on Prologue, Stroboscopic Artefacts, and Elettronica Romana.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/claudioprc",
+        "bandcamp": "https://claudioprc.bandcamp.com",
+        "instagram": "https://www.instagram.com/claudioprc/",
+        "applemusic": "https://music.apple.com/us/artist/claudio-prc/265933617"
+      },
+      "stats": {
+        "performanceCount": 7,
+        "firstPlayed": "2011-10-08",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "nationality": {
+        "code": "IT",
+        "name": "Italy"
+      }
+    },
+    "efdemin": {
+      "name": "Efdemin",
+      "tags": [
+        "Techno",
+        "House",
+        "Minimal"
+      ],
+      "blurb": "Berlin producer known for a deep, psychedelic, idiosyncratic take on house and techno, longtime Ostgut Ton/Dial artist.",
+      "bio": "Efdemin, real name Phillip Sollmann, is a Berlin-based DJ, producer and musician born in 1974 in Kassel, Germany. Known for a deep, psychedelic and idiosyncratic take on house and techno, he has released numerous 12-inches alongside three albums on Hamburg's Dial Records and the 2019 LP New Atlantis on Berghain's own label Ostgut Ton. He studied at the Institute for Computer Music in Vienna and has also worked in sound installation and opera.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/efdemin",
+        "instagram": "https://www.instagram.com/efdemin/",
+        "applemusic": "https://music.apple.com/us/artist/efdemin/187025980"
+      },
+      "stats": {
+        "performanceCount": 87,
+        "firstPlayed": "2006-08-05",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    "gigi-fm": {
+      "name": "GiGi FM",
+      "tags": [
+        "Techno"
+      ],
+      "blurb": "Techno DJ and producer building a growing profile in the Berlin club scene.",
+      "bio": "GiGi FM, also known as Gisele Soares Costa Ribeiro, is a techno DJ and producer who has been playing Berghain's Klubnacht since 2022. Her music is distributed digitally, including via Bandcamp and Apple Music.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/gigifm",
+        "bandcamp": "https://gigifm.bandcamp.com",
+        "instagram": "https://www.instagram.com/gigifm/",
+        "applemusic": "https://music.apple.com/us/artist/gigi-fm/1605657044"
+      },
+      "stats": {
+        "performanceCount": 12,
+        "firstPlayed": "2022-06-25",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "inox-traxx": {
+      "name": "Inox Traxx",
+      "tags": [
+        "Techno"
+      ],
+      "blurb": "Rising techno producer with a distinctive, unmistakable sound, releasing on Ostgut Ton and a Berghain regular.",
+      "bio": "Inox Traxx has risen quickly in the techno scene over the past few years, carving out a signature sound that's unmistakably her own. She has released on labels including Ostgut Ton, Somov, WSNWG, and KNTXT, and makes regular appearances at Berghain, cementing her position as an artist to watch.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/inoxtraxx",
+        "bandcamp": "https://inoxtraxx.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/inox-traxx/1486314931"
+      },
+      "stats": {
+        "performanceCount": 14,
+        "firstPlayed": "2022-10-01",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "isabel-soto": {
+      "name": "Isabel Soto",
+      "tags": [
+        "Techno"
+      ],
+      "blurb": "Techno DJ and producer, founder of the Nyxii Records label.",
+      "bio": "Isabel Soto is a techno DJ and producer, and founder of the Nyxii Records label. She has become a regular presence at Berghain's Klubnacht since 2024, with her productions distributed digitally including via Bandcamp and Apple Music.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/isabelsoto",
+        "bandcamp": "https://isabelsoto.bandcamp.com",
+        "instagram": "https://www.instagram.com/isabelsoto/",
+        "applemusic": "https://music.apple.com/us/artist/isabel-soto/1629622792"
+      },
+      "stats": {
+        "performanceCount": 11,
+        "firstPlayed": "2024-03-16",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "jakojako": {
+      "name": "JakoJako",
+      "tags": [
+        "Techno",
+        "Electronic"
+      ],
+      "blurb": "Berlin-based Berghain resident building hypnotic, modular-synth-driven live techno sets.",
+      "bio": "JakoJako is a Berlin-based techno producer and current Berghain resident known for live modular synthesis performances. She got her start through sound manipulation and DIY synthesizers, and in 2017 began working at Schneidersladen, Berlin's renowned synth shop, educating musicians on synthesis. Her releases include the Verve EP, Segmente EP, and Tết 41, and her work spans Berghain, MUTE, and Leisure System.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/jakojako_live",
+        "bandcamp": "https://jakojako.bandcamp.com",
+        "instagram": "https://www.instagram.com/jakojako_live/",
+        "applemusic": "https://music.apple.com/us/artist/jakojako/1269610965"
+      },
+      "stats": {
+        "performanceCount": 32,
+        "firstPlayed": "2021-11-13",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ]
+    },
+    "luke-slater": {
+      "name": "Luke Slater",
+      "tags": [
+        "Techno",
+        "Electronic"
+      ],
+      "blurb": "UK techno pioneer and torchbearer for the Detroit sound since the early '90s, also known as Planetary Assault Systems.",
+      "bio": "Luke Slater (born 1968, Reading, England) is a prolific UK techno producer and DJ recording under multiple aliases, most notably Planetary Assault Systems and L.B. Dub Corp. He debuted on vinyl in 1989 and became known as the UK torchbearer for the Detroit techno sound, breaking through in the '90s with tracks like 'Love' and 'All Exhale' via Peacefrog Records. In 2006 he launched his own label, Mote-Evolver, and has remained a fixture at clubs including Fabric, Nitsa, and Berghain.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/luke-slater",
+        "instagram": "https://www.instagram.com/lukeslater/",
+        "applemusic": "https://music.apple.com/us/artist/luke-slater/32314650"
+      },
+      "stats": {
+        "performanceCount": 86,
+        "firstPlayed": "2005-04-09",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "nationality": {
+        "code": "GB",
+        "name": "United Kingdom"
+      }
+    },
+    "quelza": {
+      "name": "Quelza",
+      "tags": [
+        "Techno",
+        "Breakbeat"
+      ],
+      "blurb": "French producer crafting hypnotic, soul-summoning techno and cantankerous breakbeats.",
+      "bio": "Quelza, aka Léo Naïtaïssa, is a French producer and DJ who emerged in Berlin's music scene and has since become an in-demand name on the international club circuit. His productions and sets mine hypnotic, soul-summoning techno alongside cantankerous breakbeats.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/quelza",
+        "bandcamp": "https://quelza.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/quelza/1464174707"
+      },
+      "stats": {
+        "performanceCount": 24,
+        "firstPlayed": "2022-09-24",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Berghain"
+        }
+      ],
+      "nationality": {
+        "code": "FR",
+        "name": "France"
+      }
+    },
+    "cinthie": {
+      "name": "Cinthie",
+      "tags": [
+        "House",
+        "Disco",
+        "Techno"
+      ],
+      "blurb": "Berlin house selector and label boss serving classic Chicago/NYC-rooted, disco-inflected house.",
+      "bio": "Cinthie is a Berlin-based DJ, producer and label owner who has been active in house music since the early 1990s. She co-founded the Beste Modus collective, runs 803 Crystal Grooves/Collective Cuts and the Elevate record store, and released her debut album on Will Saul's Aus imprint in 2020. She tours internationally, from Paris and London to Seoul and Osaka.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/cinthie",
+        "bandcamp": "https://cinthie.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/cinthie/525782272"
+      },
+      "stats": {
+        "performanceCount": 19,
+        "firstPlayed": "2021-10-30",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "marcel-dettmann": {
+      "name": "Marcel Dettmann",
+      "tags": [
+        "Techno",
+        "Industrial Techno"
+      ],
+      "blurb": "Berghain's signature dark, hypnotic, industrial-tinged techno stylist.",
+      "bio": "Marcel Dettmann is a German DJ, producer and label owner, born in 1977 in Pößneck, Thuringia. A Berghain resident and former staffer at Berlin's Hard Wax record store (2002-2012), he has been a defining force behind the club's austere, driving techno sound since the mid-2000s, releasing through Ostgut Ton and his own label, MDR.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/marceldettmann",
+        "bandcamp": "https://marceldettmann.bandcamp.com",
+        "instagram": "https://instagram.com/marceldettmann"
+      },
+      "stats": {
+        "performanceCount": 202,
+        "firstPlayed": "2004-12-18",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ],
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    "fiedel": {
+      "name": "Fiedel",
+      "tags": [
+        "Techno",
+        "House",
+        "Electro"
+      ],
+      "blurb": "Longtime Berghain resident known as a tastemaking crate-digger across techno, house and electro.",
+      "bio": "Fiedel (Michael Fiedler) is a Berlin-based DJ and longtime Berghain resident, celebrated for building surprising, groove-driven sets that move between techno, house, acid and electro-funk. He is also one half of the duo MMM with Errorsmith, releasing on Ostgut Ton and related imprints.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/fiedel",
+        "bandcamp": "https://fiedel.bandcamp.com",
+        "instagram": "https://instagram.com/fiedel.official",
+        "applemusic": "https://music.apple.com/us/artist/fiedel/266845665"
+      },
+      "stats": {
+        "performanceCount": 188,
+        "firstPlayed": "2004-12-31",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "gallegos": {
+      "name": "Gallegos",
+      "tags": [
+        "House",
+        "Broken Beat",
+        "Garage"
+      ],
+      "blurb": "UK house producer serving jazzy, soulful grooves with a broken-beat backbone.",
+      "bio": "Gallegos is a UK-based (Bristol) house DJ and producer known for jazz-inflected, soulful house and broken-beat productions, releasing via labels including Banoffee Pies and Room Service Recordings. He discovered turntablism as a child after watching the documentary Scratch, and has built an international following alongside scene peers like Soulphiction and Brawther.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/gallegos_1991",
+        "bandcamp": "https://gallegos.bandcamp.com",
+        "spotify": "https://open.spotify.com/artist/7hmArnXZVkRgobbxJBLJMF",
+        "instagram": "https://instagram.com/gallegos_1991",
+        "applemusic": "https://music.apple.com/us/artist/gallegos/41251381"
+      },
+      "stats": {
+        "performanceCount": 11,
+        "firstPlayed": "2022-10-15",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "gerd-janson": {
+      "name": "Gerd Janson",
+      "tags": [
+        "House",
+        "Disco",
+        "Techno"
+      ],
+      "blurb": "Running Back label boss reframing house and disco classics with an eclectic, playful touch.",
+      "bio": "Gerd Janson is a Frankfurt-based DJ and founder of the Running Back label, which he established in 2002. Long associated with Frankfurt's Robert Johnson club through its Liquid night, he is regarded as one of house and techno's most respected selectors for his genre-spanning, unexpected reworkings of classic material.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/gerdjanson",
+        "bandcamp": "https://gerdjanson.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/gerd-janson/456981573"
+      },
+      "stats": {
+        "performanceCount": 89,
+        "firstPlayed": "2010-04-03",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "lakuti": {
+      "name": "Lakuti",
+      "tags": [
+        "House",
+        "Techno",
+        "Soul/Funk"
+      ],
+      "blurb": "Soweto-born selector weaving soulful house, jazz and Chicago/Detroit influences into purposeful sets.",
+      "bio": "Lakuti (Lerato Khathi) is a South African-born, Berlin-based DJ, producer and Panorama Bar resident. She founded Uzuri Recordings and the Uzuri Artist Agency, and has spent decades championing Black artists and inclusive spaces in electronic music through genre-fluid sets rooted in soul, funk, jazz and Chicago house.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/lakuti",
+        "instagram": "https://instagram.com/lakuti_"
+      },
+      "stats": {
+        "performanceCount": 30,
+        "firstPlayed": "2012-12-15",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Garten"
+        }
+      ],
+      "nationality": {
+        "code": "ZA",
+        "name": "South Africa"
+      }
+    },
+    "nd-baumecker": {
+      "name": "nd_baumecker",
+      "tags": [
+        "House",
+        "Minimal House",
+        "Deep House"
+      ],
+      "blurb": "Longtime Panorama Bar resident and former booker spinning minimal, groove-focused deep house.",
+      "bio": "Andreas 'nd_baumecker' Baumecker is a Berlin-based DJ and former in-house booker at Panorama Bar, a resident since the venue's OstGut days. He is also one half of the production duo Barker & Baumecker (with Sam Barker), with releases on Ostgut Ton, and runs the Freundinnen Audio label.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/ndbaumecker",
+        "instagram": "https://instagram.com/nd_baumecker",
+        "bandcamp": "https://barkerbaumecker.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/nd-baumecker/922879880"
+      },
+      "stats": {
+        "performanceCount": 196,
+        "firstPlayed": "2004-12-31",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "nick-hoppner": {
+      "name": "Nick Höppner",
+      "tags": [
+        "House",
+        "Minimal",
+        "Electro"
+      ],
+      "blurb": "Former Ostgut Ton label manager crafting refined house shaded with alt-pop and IDM textures.",
+      "bio": "Nick Höppner is a Berlin-based DJ and producer, and a former Panorama Bar resident who managed the Ostgut Ton label from 2005 to 2012 before turning to production full-time. His solo albums, including Work, blend house music with alt-pop and IDM influences across ambient and dancefloor-oriented material alike.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/nick-hoeppner",
+        "bandcamp": "https://nickhoeppner.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/nick-h%C3%B6ppner/155889976"
+      },
+      "stats": {
+        "performanceCount": 171,
+        "firstPlayed": "2004-12-31",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Panorama Bar"
+        }
+      ]
+    },
+    "steffi": {
+      "name": "Steffi",
+      "tags": [
+        "Techno",
+        "House",
+        "Electro"
+      ],
+      "blurb": "Dutch-born Berghain resident moving from warm, atmospheric house into intricate electro-techno.",
+      "bio": "Steffi (Steffi Doms) is a Dutch DJ, producer and label owner (Klakson, Dolly) and a longtime Berghain/Panorama Bar resident since the mid-2000s. Her productions have evolved from warm, atmospheric techno-house into a more complex, intricate electro-techno sound, released via Ostgut Ton and her own imprints.",
+      "links": {
+        "instagram": "https://instagram.com/steffi_dolly_klakson/",
+        "bandcamp": "https://steffiedoms.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/steffi/29056576"
+      },
+      "stats": {
+        "performanceCount": 158,
+        "firstPlayed": "2005-11-12",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Garten"
+        }
+      ],
+      "nationality": {
+        "code": "NL",
+        "name": "Netherlands"
+      }
+    },
+    "tama-sumo": {
+      "name": "Tama Sumo",
+      "tags": [
+        "House",
+        "Techno",
+        "Disco"
+      ],
+      "blurb": "Panorama Bar resident since 2004 weaving house, techno, disco and Afrobeat into genre-fluid journeys.",
+      "bio": "Tama Sumo (Kerstin Egert) is a German DJ and Panorama Bar/Berghain resident, having played the gay/lesbian 'Dance with the Aliens' parties at the old OstGut from 2001 before becoming a resident at the new club at the end of 2004. Renowned for masterfully blending house, techno, disco and Afrobeat, she records for Ostgut Ton, often alongside close collaborator Lakuti.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/tama-sumo",
+        "applemusic": "https://music.apple.com/us/artist/tama-sumo/309708179"
+      },
+      "stats": {
+        "performanceCount": 148,
+        "firstPlayed": "2005-02-26",
+        "isResident": false
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Garten"
+        }
+      ],
+      "nationality": {
+        "code": "DE",
+        "name": "Germany"
+      }
+    },
+    "virginia": {
+      "name": "Virginia",
+      "tags": [
+        "House",
+        "Techno",
+        "Vocal House"
+      ],
+      "blurb": "Brazilian-heritage, Berlin-based Panorama Bar resident blending minimal house/techno with her own vocals.",
+      "bio": "Virginia is a DJ, singer, songwriter and producer of Brazilian heritage based in Berlin, and a Panorama Bar resident since 2012. Signed to Ostgut Ton, her productions merge minimal house and techno with her own singing, as showcased on her debut full-length exploring themes of love, lust and life.",
+      "links": {
+        "soundcloud": "https://soundcloud.com/virginia-dj",
+        "bandcamp": "https://virginia-dj.bandcamp.com",
+        "applemusic": "https://music.apple.com/us/artist/virginia/1569823236"
+      },
+      "stats": {
+        "performanceCount": 111,
+        "firstPlayed": "2011-08-27",
+        "isResident": true
+      },
+      "appearances": [
+        {
+          "date": "2026-08-08",
+          "event": "Ostgut Ton Klubnacht",
+          "room": "Garten"
+        }
+      ],
+      "nationality": {
+        "code": "BR",
+        "name": "Brazil"
       }
     }
   },
   "days": [
+    {
+      "date": "2026-08-06",
+      "weekday": "THU",
+      "event": "SÄULE",
+      "rooms": [
+        {
+          "room": "Säule",
+          "djSlugs": [
+            "rami-abi-rafi",
+            "conceptual-live",
+            "ayesha"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "weekday": "FRI",
+      "event": "Kynant",
+      "rooms": [
+        {
+          "room": "Panorama Bar",
+          "djSlugs": [
+            "tikiman",
+            "parallel-9",
+            "richard-akingbehin",
+            "aurora-halal",
+            "laura-bcr"
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "weekday": "SAT",
+      "event": "Ostgut Ton Klubnacht",
+      "rooms": [
+        {
+          "room": "Berghain",
+          "djSlugs": [
+            "altinbas-live",
+            "fadi-mohem-live",
+            "claudio-prc",
+            "efdemin",
+            "gigi-fm",
+            "inox-traxx",
+            "isabel-soto",
+            "jakojako",
+            "luke-slater",
+            "quelza"
+          ]
+        },
+        {
+          "room": "Panorama Bar",
+          "djSlugs": [
+            "cinthie",
+            "fiedel",
+            "gallegos",
+            "gerd-janson",
+            "marcel-dettmann",
+            "nd-baumecker",
+            "nick-hoppner"
+          ]
+        },
+        {
+          "room": "Garten",
+          "djSlugs": [
+            "tama-sumo",
+            "lakuti",
+            "steffi",
+            "virginia"
+          ]
+        }
+      ]
+    },
     {
       "date": "2026-08-21",
       "weekday": "FRI",

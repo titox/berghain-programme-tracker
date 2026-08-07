@@ -43,8 +43,16 @@ def check(data):
             for k in ("performanceCount", "firstPlayed", "isResident"):
                 if k not in dj["stats"]:
                     errors.append(f"djs.{slug}: stats missing '{k}'")
+        if "nationality" in dj:
+            for k in ("code", "name"):
+                if not dj["nationality"].get(k):
+                    errors.append(f"djs.{slug}: nationality missing '{k}'")
+            code = dj["nationality"].get("code", "")
+            if code and not re.match(r"^[A-Z]{2}$", code):
+                errors.append(f"djs.{slug}: nationality.code '{code}' is not a 2-letter ISO code")
 
     seen_dates = set()
+    prev_date = None
     for day in days:
         missing = REQUIRED_DAY_KEYS - day.keys()
         if missing:
@@ -54,6 +62,11 @@ def check(data):
             errors.append(f"days: invalid date format '{day['date']}'")
         if day["date"] in seen_dates:
             errors.append(f"days: duplicate date '{day['date']}'")
+        if prev_date is not None and day["date"] < prev_date:
+            errors.append(
+                f"days: not sorted ascending by date (found '{day['date']}' after '{prev_date}')"
+            )
+        prev_date = day["date"]
         seen_dates.add(day["date"])
         for room in day["rooms"]:
             if "room" not in room or "djSlugs" not in room:

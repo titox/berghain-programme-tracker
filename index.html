@@ -25,6 +25,7 @@
     --berghain: #8fb4c9;
     --panorama: #d98f3d;
     --rule: #38373d;
+    --room-accent: var(--berghain);
     --font: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
     --space-2: 8px;
     --space-3: 16px;
@@ -47,6 +48,16 @@
     flex-wrap: nowrap;
     -webkit-overflow-scrolling: touch;
   }
+  body.search-open .toggle-btn {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+  .search-reset-btn {
+    background: none; border: none; color: var(--muted); font-family: var(--font);
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: underline;
+    cursor: pointer; padding: 0; margin-right: var(--space-3);
+  }
+  .search-reset-btn:hover { color: var(--fg); }
   .toggle-btn {
     flex: none;
     white-space: nowrap;
@@ -118,7 +129,8 @@
   .dj-blurb { color: var(--fg); font-style: italic; margin: 0 0 var(--space-2) 0; }
   .dj-bio { margin: 0 0 var(--space-2) 0; }
   .dj-stats { margin: 0 0 var(--space-2) 0; font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
-  .dj-links a { color: var(--fg); margin-right: var(--space-3); text-decoration: underline; text-transform: uppercase; letter-spacing: 0.03em; }
+  .dj-links { display: flex; flex-wrap: wrap; width: 100%; gap: var(--space-2) var(--space-3); }
+  .dj-links a { color: var(--fg); text-decoration: underline; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap; }
   @media (min-width: 768px) {
     .floors { flex-direction: row; }
     .staircase { display: block; }
@@ -176,6 +188,109 @@
     display: flex; align-items: center; justify-content: center;
     font-weight: 700; font-size: 13px; letter-spacing: 0.02em;
     background: var(--room-accent); color: var(--bg);
+    position: relative;
+  }
+  .avatar-flag {
+    position: absolute; right: -4px; bottom: -4px;
+    width: 17px; height: 17px; border-radius: 50%;
+    background: var(--surface); border: 2px solid var(--surface);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; line-height: 1;
+    box-shadow: 0 0 0 1px var(--rule);
+  }
+
+  .toggle-row { display: flex; align-items: center; gap: var(--space-2); margin-bottom: var(--space-5); }
+  .toggle-row .toggle { margin-bottom: 0; flex: 1; min-width: 0; }
+  .search-icon-btn {
+    flex: none; width: 40px; height: 40px; background: var(--surface); border: 1px solid var(--rule);
+    color: var(--fg); cursor: pointer; display: flex; align-items: center; justify-content: center;
+    padding: 0;
+  }
+  .search-icon-btn:hover, .search-icon-btn.active { border-color: var(--fg); }
+  .search-icon-btn svg { width: 18px; height: 18px; }
+
+  .search-panel {
+    display: none; position: fixed; top: 0; right: 0; bottom: 0; width: 320px; max-width: 92vw;
+    background: var(--surface); border-left: 1px solid var(--rule); z-index: 15;
+    flex-direction: column;
+  }
+  .search-panel.open { display: flex; }
+  .search-panel-head {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--rule); flex: none;
+  }
+  .search-panel-title { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
+  .search-panel-close { background: none; border: none; color: var(--muted); font-size: 22px; line-height: 1; cursor: pointer; padding: 0; }
+  .search-panel-close:hover { color: var(--fg); }
+  .search-panel-body { padding: var(--space-4); overflow-y: auto; flex: 1; }
+
+  @media (min-width: 900px) {
+    body.search-open .page { padding-right: 344px; }
+  }
+
+  .field { margin-bottom: var(--space-4); }
+  .field-label { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: var(--space-2); }
+  .field input[type="text"], .field input[type="date"] {
+    width: 100%; background: var(--bg); border: 1px solid var(--rule); color: var(--fg);
+    font-family: var(--font); font-size: 14px; padding: 9px 10px; color-scheme: dark;
+  }
+  .field input:focus { outline: none; border-color: var(--berghain); }
+  .field input::placeholder { color: var(--muted); }
+  .field-row-2 { display: flex; gap: var(--space-2); }
+  .field-row-2 > * { flex: 1; min-width: 0; }
+  .field-row-2-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: block; }
+
+  .range-field-label {
+    font-size: 13px; color: var(--fg); margin-bottom: var(--space-2);
+    font-variant-numeric: tabular-nums;
+  }
+  .dual-range { position: relative; height: 24px; }
+  .dual-range-track {
+    position: absolute; top: 50%; left: 0; right: 0; height: 3px;
+    background: var(--rule); transform: translateY(-50%); pointer-events: none;
+  }
+  .dual-range-fill {
+    position: absolute; top: 50%; height: 3px;
+    background: var(--berghain); transform: translateY(-50%); pointer-events: none;
+  }
+  .dual-range input[type="range"] {
+    position: absolute; top: 0; left: 0; width: 100%; height: 24px; margin: 0;
+    background: transparent; pointer-events: none;
+    -webkit-appearance: none; appearance: none;
+  }
+  .dual-range input[type="range"]::-webkit-slider-runnable-track { background: transparent; }
+  .dual-range input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; pointer-events: auto;
+    width: 16px; height: 16px; border-radius: 50%;
+    background: var(--fg); border: 2px solid var(--bg); cursor: pointer; margin-top: -6.5px;
+  }
+  .dual-range input[type="range"]::-moz-range-track { background: transparent; border: none; }
+  .dual-range input[type="range"]::-moz-range-thumb {
+    pointer-events: auto; width: 16px; height: 16px; border-radius: 50%;
+    background: var(--fg); border: 2px solid var(--bg); cursor: pointer;
+  }
+
+  .tag-toggle {
+    display: inline-block; padding: 3px 9px; font-size: 11px; text-transform: uppercase;
+    letter-spacing: 0.05em; border: 1px solid var(--rule); color: var(--muted);
+    cursor: pointer; margin: 0 6px 6px 0; background: none; font-family: var(--font);
+  }
+  .tag-toggle.active { border-color: var(--berghain); color: var(--berghain); }
+  .tag-toggle.tag-hidden { display: none; }
+  .tag-toggle .flag-inline { margin-right: 4px; }
+  .tag-more-btn {
+    display: block; background: none; border: none; color: var(--muted); font-family: var(--font);
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; text-decoration: underline;
+    cursor: pointer; padding: 2px 0;
+  }
+  .tag-more-btn:hover { color: var(--fg); }
+
+  .search-results {
+    display: block; width: 100%;
+  }
+  .search-results-count {
+    font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em;
+    margin-bottom: var(--space-3);
   }
 </style>
 
@@ -197,17 +312,75 @@
     <h1 class="intro-headline">Berghain Programme Tracker</h1>
     <p class="intro-subtext">Every night at Berghain, tracked monthly — tap any name for their sound, bio and links before you're inside.</p>
   </div>
-  <header class="toggle" id="toggle"></header>
+  <div class="toggle-row">
+    <header class="toggle" id="toggle"></header>
+    <button class="search-icon-btn" id="search-open" aria-label="Search and filter DJs">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><line x1="20" y1="20" x2="15.3" y2="15.3"/></svg>
+    </button>
+  </div>
   <div class="floors" id="floors"></div>
 </div>
 
+<aside class="search-panel" id="search-panel" aria-hidden="true">
+  <div class="search-panel-head">
+    <span class="search-panel-title">Search &amp; Filter</span>
+    <div>
+      <button class="search-reset-btn" id="search-reset" type="button">Reset</button>
+      <button class="search-panel-close" id="search-close" aria-label="Close">&times;</button>
+    </div>
+  </div>
+  <div class="search-panel-body">
+    <div class="field">
+      <label class="field-label" for="search-name">Name</label>
+      <input type="text" id="search-name" placeholder="e.g. Marcel, Steffi…">
+    </div>
+    <div class="field">
+      <label class="field-label">Playing between</label>
+      <div class="field-row-2">
+        <div><span class="field-row-2-label">From</span><input type="date" id="search-date-from"></div>
+        <div><span class="field-row-2-label">To</span><input type="date" id="search-date-to"></div>
+      </div>
+    </div>
+    <div class="field">
+      <label class="field-label">Klubnacht performances</label>
+      <div class="range-field-label"><span id="search-perf-min-val">0</span> &#8211; <span id="search-perf-max-val">0</span></div>
+      <div class="dual-range">
+        <div class="dual-range-track"></div>
+        <div class="dual-range-fill" id="search-perf-fill"></div>
+        <input type="range" id="search-perf-min" min="0" max="0" value="0">
+        <input type="range" id="search-perf-max" min="0" max="0" value="0">
+      </div>
+    </div>
+    <div class="field">
+      <label class="field-label">Style</label>
+      <div id="search-tags"></div>
+    </div>
+    <div class="field">
+      <label class="field-label">Nationality</label>
+      <div id="search-nationalities"></div>
+    </div>
+  </div>
+</aside>
+
 <script>
+
+function esc(s) {
+  return String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+function safeHref(url) {
+  return /^https?:\/\//.test(url) ? url : null;
+}
 
 function getInitials(name) {
   const words = name.replace(/[.]/g, '').split(/\s+/).filter(w => w.length > 1 && w !== '&');
   if (words.length >= 2) return (words[0][0] + words[1][0]).toUpperCase();
   const w = words[0] || name;
   return w.slice(0, 2).toUpperCase();
+}
+
+function flagEmoji(code) {
+  if (!/^[A-Z]{2}$/.test(code || '')) return '';
+  return String.fromCodePoint(...[...code].map(c => 0x1F1E6 + c.charCodeAt(0) - 65));
 }
 
 const LINK_LABELS = [
@@ -227,10 +400,10 @@ function ordinal(n) {
 
 function renderRow(slug) {
   const dj = DATA.djs[slug];
-  const tags = dj.tags.map(t => `<span class="tag">${t}</span>`).join('');
+  const tags = dj.tags.map(t => `<span class="tag">${esc(t)}</span>`).join('');
   const links = LINK_LABELS
-    .filter(([key]) => dj.links && dj.links[key])
-    .map(([key, label]) => `<a href="${dj.links[key]}" target="_blank" rel="noopener">${label}</a>`)
+    .filter(([key]) => dj.links && dj.links[key] && safeHref(dj.links[key]))
+    .map(([key, label]) => `<a href="${safeHref(dj.links[key])}" target="_blank" rel="noopener">${label}</a>`)
     .join('');
   const statsParts = [];
   if (dj.appearances.length > 1) statsParts.push(`${ordinal(dj.appearances.length)} appearance since we started tracking`);
@@ -240,14 +413,19 @@ function renderRow(slug) {
   return `
     <div class="dj-row${hasDetail ? '' : ' dj-row--empty'}">
       <div class="dj-summary">
-        ${dj.photo
-          ? `<img class="dj-avatar" src="${dj.photo}" alt="" />`
-          : `<div class="dj-avatar">${getInitials(dj.name)}</div>`}
-        <span class="dj-name">${dj.name}</span>${tags}
+        <div class="dj-avatar">
+          ${dj.photo
+            ? `<img src="${dj.photo}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />`
+            : esc(getInitials(dj.name))}
+          ${dj.nationality
+            ? `<span class="avatar-flag" title="${esc(dj.nationality.name)}">${flagEmoji(dj.nationality.code)}</span>`
+            : ''}
+        </div>
+        <span class="dj-name">${esc(dj.name)}</span>${tags}
       </div>
       <div class="dj-detail">
-        ${dj.blurb ? `<p class="dj-blurb">${dj.blurb}</p>` : ''}
-        ${dj.bio ? `<p class="dj-bio">${dj.bio}</p>` : ''}
+        ${dj.blurb ? `<p class="dj-blurb">${esc(dj.blurb)}</p>` : ''}
+        ${dj.bio ? `<p class="dj-bio">${esc(dj.bio)}</p>` : ''}
         ${stats}
         <div class="dj-links">${links}</div>
       </div>
@@ -264,12 +442,12 @@ function roomAccentClass(room, index) {
 function renderFloors(day) {
   const floorsEl = document.getElementById('floors');
   if (!day.rooms.length) {
-    floorsEl.innerHTML = `<div class="day-empty">${day.event} — no lineup listed</div>`;
+    floorsEl.innerHTML = `<div class="day-empty">${esc(day.event)} — no lineup listed</div>`;
     return;
   }
   const sections = day.rooms.map((r, i) => `
     <section class="room room--${roomAccentClass(r.room, i)}">
-      <h2>${r.room}</h2>
+      <h2>${esc(r.room)}</h2>
       <div>${r.djSlugs.map(renderRow).join('')}</div>
     </section>`);
   const withDividers = [];
@@ -284,7 +462,7 @@ const MONTH_NAMES = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SE
 
 function formatDayLabel(day) {
   const [, mm, dd] = day.date.split('-');
-  return `${day.weekday} ${dd}.${mm} — ${day.event}`;
+  return `${day.weekday} ${dd}.${mm} — ${esc(day.event)}`;
 }
 
 function renderNav() {
@@ -310,6 +488,7 @@ function pickDefaultDate(days) {
 }
 
 function setDay(date) {
+  currentDate = date;
   document.querySelectorAll('.toggle-btn').forEach(btn => {
     btn.classList.toggle('active', btn.dataset.date === date);
   });
@@ -317,7 +496,10 @@ function setDay(date) {
   renderFloors(day);
 }
 
+let currentDate = null;
+
 document.getElementById('toggle').addEventListener('click', (e) => {
+  if (searchOpen) return;
   const btn = e.target.closest('.toggle-btn');
   if (btn) setDay(btn.dataset.date);
 });
@@ -328,15 +510,223 @@ document.addEventListener('click', (e) => {
   if (row && !row.classList.contains('dj-row--empty')) row.classList.toggle('expanded');
 });
 
+const TAGS_VISIBLE_DEFAULT = 12;
+const searchState = { name: '', dateFrom: '', dateTo: '', perfMin: 0, perfMax: 0, tags: new Set(), nationalities: new Set() };
+let searchOpen = false;
+let searchTagsRendered = false;
+
+function updatePerfFill() {
+  const minSlider = document.getElementById('search-perf-min');
+  const maxSlider = document.getElementById('search-perf-max');
+  const range = Number(minSlider.max) || 1;
+  const leftPct = (Number(minSlider.value) / range) * 100;
+  const rightPct = (Number(maxSlider.value) / range) * 100;
+  const fill = document.getElementById('search-perf-fill');
+  fill.style.left = `${leftPct}%`;
+  fill.style.width = `${Math.max(0, rightPct - leftPct)}%`;
+}
+
+function renderNationalityOptions() {
+  const byCode = new Map();
+  Object.values(DATA.djs).forEach(dj => {
+    if (dj.nationality) byCode.set(dj.nationality.code, dj.nationality.name);
+  });
+  const sorted = [...byCode.entries()].sort((a, b) => a[1].localeCompare(b[1]));
+  document.getElementById('search-nationalities').innerHTML = sorted.map(([code, name]) =>
+    `<button type="button" class="tag-toggle" data-nat="${esc(code)}"><span class="flag-inline">${flagEmoji(code)}</span>${esc(name)}</button>`
+  ).join('');
+}
+
+function renderTagOptions() {
+  const allTags = new Set();
+  Object.values(DATA.djs).forEach(dj => (dj.tags || []).forEach(t => allTags.add(t)));
+  const sorted = [...allTags].sort((a, b) => a.localeCompare(b));
+  const el = document.getElementById('search-tags');
+  const buttons = sorted.map((t, i) =>
+    `<button type="button" class="tag-toggle${i >= TAGS_VISIBLE_DEFAULT ? ' tag-hidden' : ''}" data-tag="${esc(t)}">${esc(t)}</button>`
+  ).join('');
+  const extra = sorted.length - TAGS_VISIBLE_DEFAULT;
+  const moreBtn = extra > 0 ? `<button type="button" class="tag-more-btn" id="tag-more-btn">+${extra} more</button>` : '';
+  el.innerHTML = buttons + moreBtn;
+  const moreBtnEl = document.getElementById('tag-more-btn');
+  if (moreBtnEl) {
+    moreBtnEl.addEventListener('click', () => {
+      const hidden = el.querySelectorAll('.tag-hidden');
+      const expanding = hidden.length > 0;
+      hidden.forEach(b => b.classList.remove('tag-hidden'));
+      if (expanding) {
+        moreBtnEl.textContent = 'Show less';
+      } else {
+        [...el.querySelectorAll('.tag-toggle')].slice(TAGS_VISIBLE_DEFAULT).forEach(b => b.classList.add('tag-hidden'));
+        moreBtnEl.textContent = `+${extra} more`;
+      }
+    });
+  }
+
+  const maxCount = Math.max(0, ...Object.values(DATA.djs).map(dj => (dj.stats ? dj.stats.performanceCount : 0)));
+  const minSlider = document.getElementById('search-perf-min');
+  const maxSlider = document.getElementById('search-perf-max');
+  minSlider.max = String(maxCount);
+  maxSlider.max = String(maxCount);
+  maxSlider.value = String(maxCount);
+  searchState.perfMax = maxCount;
+  document.getElementById('search-perf-max-val').textContent = String(maxCount);
+  updatePerfFill();
+  renderNationalityOptions();
+  searchTagsRendered = true;
+}
+
+function djMatchesSearch(slug) {
+  const dj = DATA.djs[slug];
+  if (searchState.name && !dj.name.toLowerCase().includes(searchState.name.toLowerCase())) return false;
+  if (searchState.dateFrom || searchState.dateTo) {
+    const inRange = (dj.appearances || []).some(a =>
+      (!searchState.dateFrom || a.date >= searchState.dateFrom) &&
+      (!searchState.dateTo || a.date <= searchState.dateTo)
+    );
+    if (!inRange) return false;
+  }
+  const maxCount = Number(document.getElementById('search-perf-max').max);
+  if (searchState.perfMin > 0 || searchState.perfMax < maxCount) {
+    if (!dj.stats) return false;
+    if (dj.stats.performanceCount < searchState.perfMin) return false;
+    if (dj.stats.performanceCount > searchState.perfMax) return false;
+  }
+  if (searchState.tags.size > 0 && !(dj.tags || []).some(t => searchState.tags.has(t))) return false;
+  if (searchState.nationalities.size > 0 && (!dj.nationality || !searchState.nationalities.has(dj.nationality.code))) return false;
+  return true;
+}
+
+function renderSearchResults() {
+  const matches = Object.keys(DATA.djs).filter(djMatchesSearch).sort((a, b) => DATA.djs[a].name.localeCompare(DATA.djs[b].name));
+  const countLabel = `${matches.length} DJ${matches.length === 1 ? '' : 's'} match`;
+  document.getElementById('floors').innerHTML =
+    `<div class="search-results"><div class="search-results-count">${countLabel}</div>${matches.map(renderRow).join('')}</div>`;
+}
+
+function openSearchPanel() {
+  if (!searchTagsRendered) renderTagOptions();
+  searchOpen = true;
+  document.getElementById('search-panel').classList.add('open');
+  document.getElementById('search-panel').setAttribute('aria-hidden', 'false');
+  document.getElementById('search-open').classList.add('active');
+  document.body.classList.add('search-open');
+  renderSearchResults();
+  document.getElementById('search-name').focus();
+}
+
+function resetSearchFilters() {
+  searchState.name = '';
+  searchState.dateFrom = '';
+  searchState.dateTo = '';
+  searchState.tags.clear();
+  document.getElementById('search-name').value = '';
+  document.getElementById('search-date-from').value = '';
+  document.getElementById('search-date-to').value = '';
+  document.querySelectorAll('#search-tags .tag-toggle.active').forEach(b => b.classList.remove('active'));
+  searchState.nationalities.clear();
+  document.querySelectorAll('#search-nationalities .tag-toggle.active').forEach(b => b.classList.remove('active'));
+  const maxCount = Number(document.getElementById('search-perf-min').max) || 0;
+  searchState.perfMin = 0;
+  searchState.perfMax = maxCount;
+  document.getElementById('search-perf-min').value = '0';
+  document.getElementById('search-perf-max').value = String(maxCount);
+  document.getElementById('search-perf-min-val').textContent = '0';
+  document.getElementById('search-perf-max-val').textContent = String(maxCount);
+  updatePerfFill();
+}
+
+function closeSearchPanel() {
+  searchOpen = false;
+  if (searchTagsRendered) resetSearchFilters();
+  document.getElementById('search-panel').classList.remove('open');
+  document.getElementById('search-panel').setAttribute('aria-hidden', 'true');
+  document.getElementById('search-open').classList.remove('active');
+  document.body.classList.remove('search-open');
+  if (currentDate) {
+    const day = DATA.days.find(d => d.date === currentDate);
+    if (day) renderFloors(day);
+  }
+}
+
+document.getElementById('search-open').addEventListener('click', () => {
+  if (searchOpen) closeSearchPanel(); else openSearchPanel();
+});
+document.getElementById('search-close').addEventListener('click', closeSearchPanel);
+document.getElementById('search-reset').addEventListener('click', () => {
+  resetSearchFilters();
+  renderSearchResults();
+});
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && searchOpen) closeSearchPanel();
+});
+
+document.getElementById('search-name').addEventListener('input', (e) => {
+  searchState.name = e.target.value;
+  renderSearchResults();
+});
+document.getElementById('search-date-from').addEventListener('change', (e) => {
+  searchState.dateFrom = e.target.value;
+  renderSearchResults();
+});
+document.getElementById('search-date-to').addEventListener('change', (e) => {
+  searchState.dateTo = e.target.value;
+  renderSearchResults();
+});
+document.getElementById('search-perf-min').addEventListener('input', (e) => {
+  searchState.perfMin = Number(e.target.value);
+  if (searchState.perfMin > searchState.perfMax) {
+    searchState.perfMax = searchState.perfMin;
+    document.getElementById('search-perf-max').value = String(searchState.perfMax);
+    document.getElementById('search-perf-max-val').textContent = String(searchState.perfMax);
+  }
+  document.getElementById('search-perf-min-val').textContent = String(searchState.perfMin);
+  updatePerfFill();
+  renderSearchResults();
+});
+document.getElementById('search-perf-max').addEventListener('input', (e) => {
+  searchState.perfMax = Number(e.target.value);
+  if (searchState.perfMax < searchState.perfMin) {
+    searchState.perfMin = searchState.perfMax;
+    document.getElementById('search-perf-min').value = String(searchState.perfMin);
+    document.getElementById('search-perf-min-val').textContent = String(searchState.perfMin);
+  }
+  document.getElementById('search-perf-max-val').textContent = String(searchState.perfMax);
+  updatePerfFill();
+  renderSearchResults();
+});
+document.getElementById('search-tags').addEventListener('click', (e) => {
+  const btn = e.target.closest('.tag-toggle');
+  if (!btn) return;
+  const tag = btn.dataset.tag;
+  if (searchState.tags.has(tag)) { searchState.tags.delete(tag); btn.classList.remove('active'); }
+  else { searchState.tags.add(tag); btn.classList.add('active'); }
+  renderSearchResults();
+});
+document.getElementById('search-nationalities').addEventListener('click', (e) => {
+  const btn = e.target.closest('.tag-toggle');
+  if (!btn) return;
+  const code = btn.dataset.nat;
+  if (searchState.nationalities.has(code)) { searchState.nationalities.delete(code); btn.classList.remove('active'); }
+  else { searchState.nationalities.add(code); btn.classList.add('active'); }
+  renderSearchResults();
+});
+
 let DATA = null;
 
 async function init() {
-  const res = await fetch('data/lineup.json');
-  DATA = await res.json();
-  renderNav();
-  setDay(pickDefaultDate(DATA.days));
-  const activeBtn = document.querySelector('.toggle-btn.active');
-  if (activeBtn) activeBtn.scrollIntoView({ inline: 'center', block: 'nearest' });
+  try {
+    const res = await fetch('data/lineup.json');
+    if (!res.ok) throw new Error(`fetch failed: ${res.status}`);
+    DATA = await res.json();
+    renderNav();
+    currentDate = pickDefaultDate(DATA.days);
+    setDay(currentDate);
+    const activeBtn = document.querySelector('.toggle-btn.active');
+    if (activeBtn) activeBtn.scrollIntoView({ inline: 'center', block: 'nearest' });
+  } catch (err) {
+    document.getElementById('floors').innerHTML = '<div class="day-empty">Couldn\'t load the programme. Try reloading.</div>';
+  }
 }
 
 init();
